@@ -5,7 +5,20 @@
       "userPassword": ""
     }
   ],
-  "meal": [],
+  "meal": [
+    {
+      "breakFast": "Pasta",
+      "lunch": "Pizza",
+      "dinner": "lentils",
+      "id": 1
+    },
+    {
+      "breakFast": "French Toast",
+      "lunch": "Curry and Naan",
+      "dinner": "Paneer Makhani and rice",
+      "id": 2
+    }
+  ],
   "days": [
     {
       "dayName": "Monday",

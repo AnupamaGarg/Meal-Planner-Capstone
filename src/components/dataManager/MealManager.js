@@ -7,9 +7,6 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/meal`).then(e => e.json());
   },
-  getAll() {
-    return fetch(`${remoteURL}/days`).then(e => e.json());
-  },
   post(newMeal) {
     return fetch(`${remoteURL}/meal`, {
       method: "POST",

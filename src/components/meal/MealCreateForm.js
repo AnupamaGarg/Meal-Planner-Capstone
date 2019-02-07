@@ -59,7 +59,7 @@ export default class MealCreateForm extends Component {
                     <div 
                         className="form-group">
                         <label htmlFor="breakFast">BreakFast</label>
-                        <input type="text" required
+                        <input  maxlength="25" type="text" required
                           className="form-control"
                          onChange={this.handleFieldChange}
                          id="breakFast" 
@@ -68,8 +68,9 @@ export default class MealCreateForm extends Component {
                  </div>
                     <div className="form-group">
                         <label htmlFor="Lunch">Lunch</label>
-                        <input type="text" required
+                        <input maxlength="25" type="text" required
                           className="form-control"
+
                           onChange={this.handleFieldChange}
                           id="lunch" 
                           value={this.state.lunch}
@@ -77,7 +78,7 @@ export default class MealCreateForm extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="url">Dinner</label>
-                        <input type="text" required
+                        <input maxlength="25" type="text" required
                           className="form-control"
                           onChange={this.handleFieldChange}
                           id="dinner" 
@@ -90,9 +91,9 @@ export default class MealCreateForm extends Component {
                     <button type="Submit"
                      onClick={this.constructNewMeal} className="btn btn-primary">
                      save</button>
-                     <button type="cancel"
+                     {/* <button type="cancel"
                      className="btn btn-primary">
-                     cancel</button>
+                     cancel</button> */}
                 </form>
             </React.Fragment>
         )
