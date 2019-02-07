@@ -1,0 +1,46 @@
+{
+  "user": [
+    {
+      "userName": "",
+      "userPassword": ""
+    }
+  ],
+  "meal": [],
+  "days": [
+    {
+      "dayName": "Monday",
+      "Id": 1
+    },
+    {
+      "dayName": "Tuesday",
+      "Id": 2
+    },
+    {
+      "dayName": "Wednesday",
+      "Id": 3
+    },
+    {
+      "dayName": "Thursday",
+      "Id": 4
+    },
+    {
+      "dayName": "Friday",
+      "Id": 5
+    }
+  ],
+  "grocery": [
+    {
+      "groceryName": "",
+      "quantity": "",
+      "storeName": "",
+      "userId": "",
+      "typeId": ""
+    }
+  ],
+  "groceryType": [
+    {
+      "name": "",
+      "groceryId": ""
+    }
+  ]
+}
