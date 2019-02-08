@@ -7,38 +7,40 @@
   ],
   "meal": [
     {
-      "breakFast": "Pasta",
-      "lunch": "Pizza",
-      "dinner": "lentils",
+      "breakFast": "toast",
+      "lunch": "toast",
+      "dinner": "toast",
+      "dayId": 3,
       "id": 1
     },
     {
-      "breakFast": "French Toast",
-      "lunch": "Curry and Naan",
-      "dinner": "Paneer Makhani and rice",
+      "breakFast": "pasta",
+      "lunch": "pasta",
+      "dinner": "pasta",
+      "dayId": 1,
       "id": 2
     }
   ],
   "days": [
     {
       "dayName": "Monday",
-      "Id": 1
+      "id": 1
     },
     {
       "dayName": "Tuesday",
-      "Id": 2
+      "id": 2
     },
     {
       "dayName": "Wednesday",
-      "Id": 3
+      "id": 3
     },
     {
       "dayName": "Thursday",
-      "Id": 4
+      "id": 4
     },
     {
       "dayName": "Friday",
-      "Id": 5
+      "id": 5
     }
   ],
   "grocery": [
