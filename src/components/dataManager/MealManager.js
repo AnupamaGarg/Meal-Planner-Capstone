@@ -2,13 +2,13 @@ const remoteURL = "http://localhost:5002";
 
 export default {
   get(id) {
-    return fetch(`${remoteURL}/meal/${id}`).then(e => e.json());
+    return fetch(`${remoteURL}/meals/${id}`).then(e => e.json());
   },
   getAll() {
-    return fetch(`${remoteURL}/meal`).then(e => e.json());
+    return fetch(`${remoteURL}/meals`).then(e => e.json());
   },
   post(newMeal) {
-    return fetch(`${remoteURL}/meal`, {
+    return fetch(`${remoteURL}/meals`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -18,7 +18,7 @@ export default {
     .then(e => e.json());
   },
   delete(id){
-    return fetch(`${remoteURL}/meal/${id}`,{
+    return fetch(`${remoteURL}/meals/${id}`,{
       method:"DELETE",
       headers:{
         "Content-Type": "application/json"
@@ -27,7 +27,7 @@ export default {
   },
 
   put(mealId, existingMeal) {
-    return fetch(`${remoteURL}/meal/${mealId}`, {
+    return fetch(`${remoteURL}/meals/${mealId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

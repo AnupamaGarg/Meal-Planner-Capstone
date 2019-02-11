@@ -9,8 +9,9 @@ import MealManager from './dataManager/MealManager'
 export default class ApplicationViews extends Component {
 
     state = {
-        meal:[],
+        meals:[],
         days: []
+
 
     }
 
@@ -19,17 +20,19 @@ export default class ApplicationViews extends Component {
         fetch("http://localhost:5002/days")
         .then(r => r.json())
         .then(alldays => newState.days = alldays)
-        fetch("http://localhost:5002/meal")
+        
+        fetch("http://localhost:5002/meals?_expand=day&_sort=dayId")
         .then(r => r.json())
-        .then(allMeals => newState.meal = allMeals)
+        .then(allMeals => newState.meals = allMeals)
         .then(() => this.setState(newState))
         console.log(newState)
     }
    
     deleteMeal = id => MealManager.delete(id)
+
     .then(() => MealManager.getAll())
     .then(allMeals => this.setState({
-      meal: allMeals
+      meals: allMeals
     })
     )
 
@@ -38,7 +41,7 @@ export default class ApplicationViews extends Component {
      newMeal = (meal) => MealManager.post(meal)
         .then(() => MealManager.getAll())
         .then(allMeals => this.setState({
-            meal: allMeals
+            meals:allMeals
         })
         )
 
@@ -48,7 +51,7 @@ export default class ApplicationViews extends Component {
             .then(() => MealManager.getAll())
             .then(allMeals => {
               this.setState({
-                meal: allMeals
+                meals: allMeals
               })
             });
           }
@@ -59,22 +62,25 @@ export default class ApplicationViews extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <React.Fragment className="divA">
 
                 <Route
                  exact path="/"
                     render={props => {
                         return  <React.Fragment>
-                        <MealCreateForm {...props} addMeal= {this.newMeal}  days={this.state.days} />
-                         <MealList {...props}{...this.props} meals={this.state.meal} deleteMeal={this.deleteMeal} />
+                        <MealCreateForm className="div" {...props} addMeal= {this.newMeal} 
+                                                   days={this.state.days} 
+                                                //    meals={this.state.meals}
+                                                   />
+                         <MealList className="div" {...props}{...this.props} meals={this.state.meals} deleteMeal={this.deleteMeal}/>
                         </React.Fragment>
                     }}/>
 
                     <Route
-          path="/:mealId(\d+)/edit" render={props => {
-            return <MealEditForm {...props} updateMeal={this.updateMeal}/>
-          }}
-        />
+                      path="/:mealId(\d+)/edit" render={props => {
+                      return <MealEditForm {...props} meals={this.state.meals} days={this.state.days} updateMeal={this.updateMeal}/>
+          }} 
+         />
 
                     
          </React.Fragment>

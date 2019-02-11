@@ -7,8 +7,9 @@ export default class MealCreateForm extends Component {
         lunch: "",
         dinner: "",
         dayId: ""
+        
 
-    }
+    };
 
 
 
@@ -17,27 +18,29 @@ export default class MealCreateForm extends Component {
 
     handleFieldChange = evt => {
         const stateToChange = {}
+        console.log(evt.target.id, evt.target.value);
+
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
 
     constructNewMeal = evt => {
         evt.preventDefault()
+        if (this.state.dayId === ""){
+        window.alert("Please select the day")
+    }else{
         const meal = {
             breakFast: this.state.breakFast,
             lunch: this.state.lunch,
             dinner: this.state.dinner,
-            dayId: this.state.dayId        
+            dayId: this.state.dayId
+            // dayId: this.props.days.find(e=>e.name === this.state.day).id     
             }
         this.props.addMeal(meal).then(() => this.props.history.push("/"))
+        }
     }
-
-
-
-
-
-
-    render() {
+     render() {
+        console.log(this.props.meals)
         return (
             <React.Fragment>
                 {/* <div>
@@ -45,17 +48,7 @@ export default class MealCreateForm extends Component {
                     <label>BreakFast</label>
                     <input type="text" onChange={this.handleFieldChange} id ="bf" value = {this.state.breakFast}>
                 </fieldset>
-
-                <fieldset>
-                    <label>Lunch</label>
-                    <input type="text" onChange={this.handleFieldChange} id ="bf" value = {this.state.lunch}>
-                </fieldset>
-
-                <fieldset>
-                    <label>Dinner</label>
-                    <input type="text" onChange={this.handleFieldChange} id ="bf" value = {this.state.dinner}>
-                </fieldset>
-                </div> */}
+            </div> */}
 
                 <form className="CreateMealForm">
                     <div className="form-group">
@@ -64,12 +57,13 @@ export default class MealCreateForm extends Component {
                             onChange={this.handleFieldChange}
                             id="dayId">
                                 <option value="">Select Day</option>
-                                {this.props.days.map(evt =>(
-                                    <option key={evt.Id} value={evt.Id}>
-                                    {evt.dayName}
+                                {this.props.days.map(e =>(
+                                    <option key={e.id} value={e.id}>
+                                    {e.name}
                                     </option>
                                 ))}
                                 </select>
+
 
 
                            
@@ -77,30 +71,33 @@ export default class MealCreateForm extends Component {
                     <div
                             className="form-group">
                             <label htmlFor="breakFast">BreakFast</label>
-                            <input maxlength="25" type="text" required
+                            <input maxlength="25" 
+                                type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="breakFast"
-                                value={this.state.breakFast}
+                                
                             />
                         </div>
                         <div className="form-group">
                             <label htmlFor="Lunch">Lunch</label>
-                            <input maxlength="25" type="text" required
+                            <input maxlength="25" 
+                                type="text" required
                                 className="form-control"
 
                                 onChange={this.handleFieldChange}
                                 id="lunch"
-                                value={this.state.lunch}
+                                
                             />
                         </div>
                         <div className="form-group">
                             <label htmlFor="url">Dinner</label>
-                            <input maxlength="25" type="text" required
+                            <input maxlength="25" 
+                                type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="dinner"
-                                value={this.state.dinner}
+                                
                             />
                         </div>
 
@@ -109,9 +106,7 @@ export default class MealCreateForm extends Component {
                         <button type="Submit"
                             onClick={this.constructNewMeal} className="btn btn-primary">
                             save</button>
-                        {/* <button type="cancel"
-                     className="btn btn-primary">
-                     cancel</button> */}
+                        
                 </form>
             </React.Fragment>
                 )

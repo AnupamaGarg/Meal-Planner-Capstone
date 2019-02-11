@@ -1,61 +1,82 @@
 {
-  "user": [
+  "users": [
     {
       "userName": "",
       "userPassword": ""
     }
   ],
-  "meal": [
+  "meals": [
     {
-      "breakFast": "toast",
-      "lunch": "toast",
-      "dinner": "toast",
-      "dayId": 3,
-      "id": 1
+      "breakFast": "milk",
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": "2",
+      "id": 2
+    },
+    {
+      "breakFast": "idli",
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": "1",
+      "id": 3
+    },
+    {
+      "breakFast": "Juice and toast",
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": "3",
+      "id": 5
     },
     {
       "breakFast": "pasta",
-      "lunch": "pasta",
-      "dinner": "pasta",
-      "dayId": 1,
-      "id": 2
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": "5",
+      "id": 6
+    },
+    {
+      "breakFast": "pasta",
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": "4",
+      "id": 7
     }
   ],
   "days": [
     {
-      "dayName": "Monday",
+      "name": "Monday",
       "id": 1
     },
     {
-      "dayName": "Tuesday",
+      "name": "Tuesday",
       "id": 2
     },
     {
-      "dayName": "Wednesday",
+      "name": "Wednesday",
       "id": 3
     },
     {
-      "dayName": "Thursday",
+      "name": "Thursday",
       "id": 4
     },
     {
-      "dayName": "Friday",
+      "name": "Friday",
       "id": 5
     }
   ],
-  "grocery": [
+  "grocerys": [
     {
-      "groceryName": "",
+      "grocery": "",
       "quantity": "",
-      "storeName": "",
+      "store": "",
       "userId": "",
       "typeId": ""
     }
   ],
-  "groceryType": [
+  "groceryTypes": [
     {
-      "name": "",
-      "groceryId": ""
+      "type": "",
+      "id": ""
     }
   ]
 }
