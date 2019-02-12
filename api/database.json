@@ -72,105 +72,14 @@
   ],
   "groceries": [
     {
-      "grocery": "Onions",
-      "quantity": "2 lb",
+      "groceryName": "apples",
+      "quantity": "4 lb",
       "store": "Kroger",
-      "typeId": "1",
+      "typeId": 2,
       "id": 1
-    },
-    {
-      "grocery": "Tomato",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "2",
-      "id": 2
-    },
-    {
-      "grocery": "Oranges",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "2",
-      "id": 3
-    },
-    {
-      "grocery": "Oranges",
-      "quantity": "4lb",
-      "store": "Kroger",
-      "typeId": "",
-      "id": 4
-    },
-    {
-      "grocery": "Apples",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "",
-      "id": 5
-    },
-    {
-      "grocery": "Banana",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "2",
-      "id": 6
-    },
-    {
-      "grocery": "Tomato",
-      "quantity": "6lb",
-      "store": "Kroger",
-      "typeId": 2,
-      "id": 7
-    },
-    {
-      "grocery": "Tomato",
-      "quantity": "6lb",
-      "store": "Kroger",
-      "typeId": 2,
-      "id": 8
-    },
-    {
-      "grocery": "Onions",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": 2,
-      "id": 9
-    },
-    {
-      "grocery": "Onions",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "",
-      "id": 10
-    },
-    {
-      "grocery": "Onions",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "",
-      "id": 11
-    },
-    {
-      "grocery": "Onions",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "",
-      "id": 12
-    },
-    {
-      "grocery": "Onions",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "",
-      "id": 13
-    },
-    {
-      "grocery": "Onions",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": "",
-      "id": 14
     }
   ],
-  "groceryTypes": [
+  "types": [
     {
       "type": "Dairy",
       "id": "1"

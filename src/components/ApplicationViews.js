@@ -3,8 +3,9 @@ import React, { Component } from "react";
 import MealCreateForm from './meal/MealCreateForm'
 import GroceryCreateForm from './grocery/GroceryCreateForm'
 import MealList from './meal/MealList'
-// import GroceryList from './grocery/GroceryList'
+import GroceryList from './grocery/GroceryList'
 import MealEditForm from './meal/MealEditForm'
+import GroceryEditForm from './grocery/GroceryEditForm'
 import MealManager from './dataManager/MealManager'
 import GroceryManager from './dataManager/GroceryManager'
 import NabBar from './nav/NavBar'
@@ -16,7 +17,7 @@ export default class ApplicationViews extends Component {
         meals:[],
         days: [],
         groceries:[],
-        groceryTypes:[]
+        types:[]
 
 
     }
@@ -34,11 +35,11 @@ export default class ApplicationViews extends Component {
         console.log(newState) 
 
 
-        fetch("http://localhost:5002/groceryTypes")
+        fetch("http://localhost:5002/types")
         .then(r => r.json())
-        .then(allTypes => newState.groceryTypes = allTypes)
+        .then(allTypes => newState.types = allTypes)
         
-        fetch("http://localhost:5002/groceries")
+        fetch("http://localhost:5002/groceries?_expand=type")
         .then(r => r.json())
         .then(allgroceries => newState.groceries = allgroceries)
         .then(() => this.setState(newState))
@@ -47,34 +48,22 @@ export default class ApplicationViews extends Component {
 
 
     }
-   
+   //////// DB calls Meal////////////////
     deleteMeal = id => MealManager.delete(id)
-
     .then(() => MealManager.getAll())
     .then(allMeals => this.setState({
       meals: allMeals
     })
     )
 
-    
-
-     newMeal = (meal) => MealManager.post(meal)
+    newMeal = (meal) => MealManager.post(meal)
         .then(() => MealManager.getAll())
         .then(allMeals => this.setState({
             meals:allMeals
         })
         )
 
-
-        newGrocery = (newGrocery) => GroceryManager.post(newGrocery)
-        .then(() => GroceryManager.getAll())
-        .then(allGrocery => this.setState({
-            groceries:allGrocery
-        })
-        )
-
-
-        updateMeal = (mealId, editedMealObj) => {
+    updateMeal = (mealId, editedMealObj) => {
             return MealManager.put(mealId, editedMealObj)
             .then(() => MealManager.getAll())
             .then(allMeals => {
@@ -84,7 +73,32 @@ export default class ApplicationViews extends Component {
             });
           }
         
+  ////////////  DB calls Grocery //////
 
+  newGrocery = (newGrocery) => GroceryManager.post(newGrocery)
+        .then(() => GroceryManager.getAll())
+        .then(allGroceries => this.setState({
+            groceries:allGroceries
+        })
+        )
+
+   deleteGrocery = id => GroceryManager.delete(id)
+    .then(() => GroceryManager.getAll())
+    .then(allGroceries => this.setState({
+      groceries: allGroceries
+    })
+    )
+  
+
+    updateGrocery = (groceryId, editedGroceryObj) => {
+      return GroceryManager.put(groceryId, editedGroceryObj)
+      .then(() => GroceryManager.getAll())
+      .then(allGroceries => {
+        this.setState({
+          groceries: allGroceries
+        })
+      });
+    }
 
 
 
@@ -97,20 +111,20 @@ export default class ApplicationViews extends Component {
                     render={props => {
                         return  <React.Fragment>
                         <MealCreateForm className="div" {...props} 
-                                                    addMeal= {this.newMeal} 
-                                                   days={this.state.days} 
+                         addMeal= {this.newMeal} 
+                         days={this.state.days} 
                                               
-                                                   />
-                                                   
+                         />
+
                          <MealList className="div" {...props}{...this.props} 
-                                                    meals={this.state.meals} 
-                                                   deleteMeal={this.deleteMeal}/>
+                           meals={this.state.meals} 
+                           deleteMeal={this.deleteMeal}/>
                         </React.Fragment>
                     }}/>
 
                     
 
-                    <Route
+                <Route
                       path="/:mealId(\d+)/edit" render={props => {
                       return <MealEditForm {...props} 
                       meals={this.state.meals} 
@@ -125,23 +139,24 @@ export default class ApplicationViews extends Component {
                         return  <React.Fragment>
                         <GroceryCreateForm className="div" {...props} 
                         addGrocery={this.newGrocery} 
-                        groceryTypes={this.state.groceryTypes} 
+                        types={this.state.types} 
                                               
-                                                   />
-                         {/* <GroceryList className="div" {...props}{...this.props} groceries={this.state.meals} deleteGrocery={this.deleteGrocery}/> */}
+                         />
+                         <GroceryList className="div" {...props}{...this.props} 
+                         groceries={this.state.groceries} 
+                         deleteGrocery={this.deleteGrocery}
+                         types={this.state.types}/>
                         </React.Fragment>
                     }}/>
-                    {/* <Route
-                 exact path="/list"
-                    render={props => {
-                        return  <React.Fragment>
-                        
-                         <MealList className="div" {...props}{...this.props} 
-                         meals={this.state.meals} 
-                         deleteMeal={this.deleteMeal}/>
-                        </React.Fragment>
-                    }}/> */}
-
+             <Route
+                      path="/:groceryId(\d+)/grocery/edit" render={props => {
+                      return <GroceryEditForm {...props} 
+                      groceries={this.state.groceries} 
+                      types={this.state.types} 
+                      updateGrocery={this.updateGrocery}/>
+          }} 
+         />       
+                    
 
                     
          </React.Fragment>

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
+import GroceryManager from '../dataManager/GroceryManager'
 
-export default class GroceryCreateForm extends Component {
+export default class GroceryEditForm extends Component {
     // Set initial state
     state = {
         groceryName: "",
@@ -20,39 +21,44 @@ export default class GroceryCreateForm extends Component {
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
-       clear = evt  => {
-           value:[evt.target.id
-        ]=evt.target.value=""
-       }
+       
         
-    handleDropDownChange = evt => {
-        const stateToChange = {}
-        // console.log(evt.target.id, evt.target.value);
+    
 
-        stateToChange[evt.target.id] = parseInt(evt.target.value)
-        this.setState(stateToChange)
-    }
-
-    constructNewgrocery = evt => {
+    updateExistingGrocery = evt => {
         evt.preventDefault()
-            const newGrocery = {
-            groceryName: this.state.groceryName,
+            const existingGrocery = {
+            groceryName: this.state.grocery,
             quantity: this.state.quantity,
             store: this.state.store,
             typeId: this.state.typeId
-            // typeId: this.props.groceryTypes.find(e=>e.type === this.state.type).id     
+                 
         }
-        //  this.clear()
-        this.props.addGrocery(newGrocery).then(() => this.props.history.push("/grocery"))
+        
+        this.props.updateGrocery(this.props.match.params.groceryId, existingGrocery)
+        .then(() => this.props.history.push("/grocery")) 
         
     }
+
+    componentDidMount() {
+        GroceryManager.get(this.props.match.params.groceryId)
+        .then(grocery => {
+          this.setState({
+        groceryName: grocery.GroceryName,
+        quantity: grocery.quantity,
+        store: grocery.store,
+        typeId: grocery.typeId
+              
+          });
+        });
+      }
      render() {
-        console.log(this.props.meals)
+        
         return (
             <React.Fragment>
                 
                    <form className="CreateMealForm">
-                   <div><b>Create Grocery List</b></div>
+                   <div><b>Edit Grocery List</b></div>
                     
                     <div
                             className="form-group">
@@ -62,6 +68,7 @@ export default class GroceryCreateForm extends Component {
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="groceryName"
+                                value={this.state.groceryName}
                                 
                             />
                         </div>
@@ -70,10 +77,11 @@ export default class GroceryCreateForm extends Component {
                             <input maxlength="25" 
                                 type="text" required
                                 className="form-control"
-                                // defaultValue="" 
+                            
 
                                 onChange={this.handleFieldChange}
                                 id="quantity"
+                                value={this.state.quantity}
                                 
                             />
                         </div>
@@ -85,6 +93,7 @@ export default class GroceryCreateForm extends Component {
                                 defaultValue="" 
                                 onChange={this.handleFieldChange}
                                 id="store"
+                                value={this.state.store}
                                 
                             />
                         </div>
@@ -108,9 +117,7 @@ export default class GroceryCreateForm extends Component {
 
 
 
-                        <button type="Submit"
-                            onClick={this.constructNewgrocery} className="btn btn-primary">
-                            save</button>
+                        <button type="submit" onClick={this.updateExistingGrocery} className="btn btn-primary">Save</button>
                         
                 </form>
             </React.Fragment>
