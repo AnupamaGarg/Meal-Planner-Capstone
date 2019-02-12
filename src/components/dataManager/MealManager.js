@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/meals/${id}`).then(e => e.json());
   },
   getAll() {
-    return fetch(`${remoteURL}/meals`).then(e => e.json());
+    return fetch(`${remoteURL}/meals?_expand=day&_sort=dayId`).then(e => e.json());
   },
   post(newMeal) {
     return fetch(`${remoteURL}/meals`, {

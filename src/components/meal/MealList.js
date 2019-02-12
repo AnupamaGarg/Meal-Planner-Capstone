@@ -15,9 +15,11 @@ class MealList extends Component {
                     <section className="meal">
                         {
                             this.props.meals.map(meal =>
+                            
                                 <div className="eachListDiv" key={meal.id}>
                                     <hr></hr>
-                                    <h3>{meal.day.name}</h3>
+                                    <h3>{meal.day ? meal.day.name : ""}</h3>
+                                    {/* <h3>{meal.day.name}</h3> */}
 
                                     <h4>BreakFast -{meal.breakFast} </h4>
                                     

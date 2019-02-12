@@ -1,25 +1,17 @@
 {
   "users": [
     {
-      "userName": "",
-      "userPassword": ""
+      "email": "dolly@email",
+      "Password": "abc",
+      "id": 1
+    },
+    {
+      "email": "sejal@email",
+      "Password": "abc",
+      "id": 2
     }
   ],
   "meals": [
-    {
-      "breakFast": "milk",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "2",
-      "id": 2
-    },
-    {
-      "breakFast": "idli",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "1",
-      "id": 3
-    },
     {
       "breakFast": "Juice and toast",
       "lunch": "lunch",
@@ -40,6 +32,20 @@
       "dinner": "dinner",
       "dayId": "4",
       "id": 7
+    },
+    {
+      "breakFast": "Poha with chutney",
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": "2",
+      "id": 11
+    },
+    {
+      "breakFast": "PB&J sandwitch",
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": 1,
+      "id": 12
     }
   ],
   "days": [
@@ -64,19 +70,134 @@
       "id": 5
     }
   ],
-  "grocerys": [
+  "groceries": [
     {
-      "grocery": "",
-      "quantity": "",
-      "store": "",
-      "userId": "",
-      "typeId": ""
+      "grocery": "Onions",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "1",
+      "id": 1
+    },
+    {
+      "grocery": "Tomato",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "2",
+      "id": 2
+    },
+    {
+      "grocery": "Oranges",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "2",
+      "id": 3
+    },
+    {
+      "grocery": "Oranges",
+      "quantity": "4lb",
+      "store": "Kroger",
+      "typeId": "",
+      "id": 4
+    },
+    {
+      "grocery": "Apples",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "",
+      "id": 5
+    },
+    {
+      "grocery": "Banana",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "2",
+      "id": 6
+    },
+    {
+      "grocery": "Tomato",
+      "quantity": "6lb",
+      "store": "Kroger",
+      "typeId": 2,
+      "id": 7
+    },
+    {
+      "grocery": "Tomato",
+      "quantity": "6lb",
+      "store": "Kroger",
+      "typeId": 2,
+      "id": 8
+    },
+    {
+      "grocery": "Onions",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": 2,
+      "id": 9
+    },
+    {
+      "grocery": "Onions",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "",
+      "id": 10
+    },
+    {
+      "grocery": "Onions",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "",
+      "id": 11
+    },
+    {
+      "grocery": "Onions",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "",
+      "id": 12
+    },
+    {
+      "grocery": "Onions",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "",
+      "id": 13
+    },
+    {
+      "grocery": "Onions",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": "",
+      "id": 14
     }
   ],
   "groceryTypes": [
     {
-      "type": "",
-      "id": ""
+      "type": "Dairy",
+      "id": "1"
+    },
+    {
+      "type": "Produce",
+      "id": "2"
+    },
+    {
+      "type": "Frozen",
+      "id": "3"
+    },
+    {
+      "type": "Bakery",
+      "id": "4"
+    },
+    {
+      "type": "Meat/Cheese",
+      "id": "5"
+    },
+    {
+      "type": "Toitetries/Cleaning",
+      "id": "5"
+    },
+    {
+      "type": "Misc",
+      "id": "6"
     }
   ]
 }

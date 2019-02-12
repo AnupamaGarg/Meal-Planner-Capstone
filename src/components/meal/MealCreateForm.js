@@ -23,6 +23,13 @@ export default class MealCreateForm extends Component {
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
+    handleDropDownChange = evt => {
+        const stateToChange = {}
+        // console.log(evt.target.id, evt.target.value);
+
+        stateToChange[evt.target.id] = parseInt(evt.target.value)
+        this.setState(stateToChange)
+    }
 
     constructNewMeal = evt => {
         evt.preventDefault()
@@ -36,11 +43,12 @@ export default class MealCreateForm extends Component {
             dayId: this.state.dayId
             // dayId: this.props.days.find(e=>e.name === this.state.day).id     
             }
+            console.log( "Gives the meal object", meal)
         this.props.addMeal(meal).then(() => this.props.history.push("/"))
         }
     }
      render() {
-        console.log(this.props.meals)
+        console.log(this.props.days)
         return (
             <React.Fragment>
                 {/* <div>
@@ -51,10 +59,11 @@ export default class MealCreateForm extends Component {
             </div> */}
 
                 <form className="CreateMealForm">
+                <div><b>Create Meal</b></div>
                     <div className="form-group">
                             <select required
                             className="form-control"
-                            onChange={this.handleFieldChange}
+                            onChange={this.handleDropDownChange }
                             id="dayId">
                                 <option value="">Select Day</option>
                                 {this.props.days.map(e =>(
@@ -99,13 +108,18 @@ export default class MealCreateForm extends Component {
                                 id="dinner"
                                 
                             />
-                        </div>
+
+
+
+                           
+                    </div>
 
 
 
                         <button type="Submit"
                             onClick={this.constructNewMeal} className="btn btn-primary">
                             save</button>
+
                         
                 </form>
             </React.Fragment>
