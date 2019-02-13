@@ -16,7 +16,7 @@ export default class GroceryEditForm extends Component {
 
     handleFieldChange = evt => {
         const stateToChange = {}
-        console.log(evt.target.id, evt.target.value);
+        // console.log(evt.target.id, evt.target.value);
 
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
@@ -28,7 +28,7 @@ export default class GroceryEditForm extends Component {
     updateExistingGrocery = evt => {
         evt.preventDefault()
             const existingGrocery = {
-            groceryName: this.state.grocery,
+            groceryName: this.state.groceryName,
             quantity: this.state.quantity,
             store: this.state.store,
             typeId: this.state.typeId
@@ -44,7 +44,7 @@ export default class GroceryEditForm extends Component {
         GroceryManager.get(this.props.match.params.groceryId)
         .then(grocery => {
           this.setState({
-        groceryName: grocery.GroceryName,
+        groceryName: grocery.groceryName,
         quantity: grocery.quantity,
         store: grocery.store,
         typeId: grocery.typeId

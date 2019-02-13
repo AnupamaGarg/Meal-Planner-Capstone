@@ -16,8 +16,8 @@ class MealList extends Component {
                         {
                             this.props.meals.map(meal =>
                             
-                                <div className="eachListDiv" key={meal.id}>
-                                    <hr></hr>
+                                <div className="eachMealListItem" key={meal.id}>
+                                    {/* <hr></hr> */}
                                     <h3>{meal.day ? meal.day.name : ""}</h3>
                                     {/* <h3>{meal.day.name}</h3> */}
 

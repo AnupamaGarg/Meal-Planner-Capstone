@@ -8,3 +8,29 @@
     flex-wrap: wrap;
     background-color: aqua
 } */
+
+.CreateGroceryForm{
+    display: flex;
+ justify-content: center;
+ justify-content: space-around;
+ background-color: aquamarine;
+}
+
+.list{
+    display: flex;
+    flex-wrap:wrap;
+    
+}
+.eachListDiv{
+
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    flex-flow: row wrap;
+   
+    /* align-content: space-around */
+ }  
+ .GListHeading{
+     text-align: center;
+    font: bold;
+ }

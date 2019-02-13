@@ -27,7 +27,7 @@ export default {
   },
 
   put(groceryId, existingGrocery) {
-    return fetch(`${remoteURL}/meals/${groceryId}`, {
+    return fetch(`${remoteURL}/groceries/${groceryId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

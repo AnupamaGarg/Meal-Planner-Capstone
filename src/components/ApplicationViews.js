@@ -1,4 +1,5 @@
 import { Route,Redirect} from "react-router-dom";
+import Register from './authentication/Register'
 import React, { Component } from "react";
 import MealCreateForm from './meal/MealCreateForm'
 import GroceryCreateForm from './grocery/GroceryCreateForm'
@@ -8,8 +9,9 @@ import MealEditForm from './meal/MealEditForm'
 import GroceryEditForm from './grocery/GroceryEditForm'
 import MealManager from './dataManager/MealManager'
 import GroceryManager from './dataManager/GroceryManager'
-import NabBar from './nav/NavBar'
-// import "./WeeklyPlanner.css"
+import LoginManager from './dataManager/LoginManager'
+import NavBar from './nav/NavBar'
+import "./WeeklyPlanner.css"
 
 export default class ApplicationViews extends Component {
 
@@ -18,9 +20,12 @@ export default class ApplicationViews extends Component {
         days: [],
         groceries:[],
         types:[]
+        
 
 
     }
+
+    isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
     componentDidMount() {
       const newState = {}
@@ -28,8 +33,9 @@ export default class ApplicationViews extends Component {
         .then(r => r.json())
         .then(alldays => newState.days = alldays)
         
-        fetch("http://localhost:5002/meals?_expand=day&_sort=dayId")
-        .then(r => r.json())
+        // fetch("http://localhost:5002/meals?_expand=day&_sort=dayId")
+        // .then(r => r.json())
+        MealManager.getAll()
         .then(allMeals => newState.meals = allMeals)
         .then(() => this.setState(newState))
         console.log(newState) 
@@ -39,12 +45,15 @@ export default class ApplicationViews extends Component {
         .then(r => r.json())
         .then(allTypes => newState.types = allTypes)
         
-        fetch("http://localhost:5002/groceries?_expand=type")
-        .then(r => r.json())
+        // fetch("http://localhost:5002/groceries?_expand=type")
+        // .then(r => r.json())
+        GroceryManager.getAll()
         .then(allgroceries => newState.groceries = allgroceries)
         .then(() => this.setState(newState))
         console.log(newState)
 
+        LoginManager.getAll()
+        .then(allUsers => newState.users = allUsers)
 
 
     }
@@ -105,6 +114,7 @@ export default class ApplicationViews extends Component {
     render() {
         return (
             <React.Fragment >
+              <Route path="/register" component={Register} />
 
                 <Route
                  exact path="/"
@@ -112,7 +122,9 @@ export default class ApplicationViews extends Component {
                         return  <React.Fragment>
                         <MealCreateForm className="div" {...props} 
                          addMeal= {this.newMeal} 
-                         days={this.state.days} 
+                         days={this.state.days}
+                         meals={this.state.meals} 
+                         deleteMeal={this.deleteMeal}
                                               
                          />
 
@@ -151,11 +163,31 @@ export default class ApplicationViews extends Component {
              <Route
                       path="/:groceryId(\d+)/grocery/edit" render={props => {
                       return <GroceryEditForm {...props} 
-                      groceries={this.state.groceries} 
+                      // groceries={this.state.groceries} 
                       types={this.state.types} 
                       updateGrocery={this.updateGrocery}/>
           }} 
-         />       
+         />    
+
+         {/* <Route exact path="/" render={props => {
+    if (this.isAuthenticated()) {
+        return <React.Fragment>
+        <MealCreateForm className="div" {...props} 
+         addMeal= {this.newMeal} 
+         days={this.state.days} 
+                              
+         />
+
+         <MealList className="div" {...props}{...this.props} 
+           meals={this.state.meals} 
+           deleteMeal={this.deleteMeal}/>
+        </React.Fragment>
+    
+    } else {
+        return <Redirect to="/register" />
+    }
+}} />  */}
+
                     
 
                     

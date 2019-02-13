@@ -4,19 +4,13 @@ import { Link } from "react-router-dom";
 
 class GroceryList extends Component {
     render() {
-        console.log(this.props.groceries)
+        // console.log(this.props.groceries)
                
 
 
         return (
             <React.Fragment>
-                {/* <div>
-                    <button 
-                    onclick={this.props.history.push("/")}
-                    >Go to Meal Planner</button>
-                </div>
-                 */}
-
+                  <div className="GListHeading"><b>GroceryList</b></div>
                 <div className="glist">
 
                     <section className="grocery">
@@ -29,15 +23,14 @@ class GroceryList extends Component {
                     } */}
                         {
                             this.props.groceries.map(grocery =>
-                            
+                                
                                 <div className="eachListDiv" key={grocery.id}>
-                                    <hr></hr>
-                                    <div><h3>GroceryList</h3></div>
+                                    
+                                    <input type="checkbox" id="myCheck"/>
                                     <h4>{grocery.groceryName} </h4>
                                     <h4>{grocery.quantity} </h4>
                                     <h4>{grocery.store} </h4>
                                     {/* <h4>{grocery.type.type} </h4> */}
-
                                     <h4>{grocery.type ? grocery.type.type : ""} </h4>
                                     
                                     
@@ -55,7 +48,7 @@ class GroceryList extends Component {
 
 
 
-                                    <hr></hr>
+                                    
                                 </div>
 
                             )

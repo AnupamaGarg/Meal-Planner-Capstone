@@ -34,18 +34,39 @@
       "id": 7
     },
     {
-      "breakFast": "Poha with chutney",
+      "breakFast": "poha",
       "lunch": "lunch",
       "dinner": "dinner",
-      "dayId": "2",
-      "id": 11
+      "dayId": 2,
+      "id": 13
     },
     {
-      "breakFast": "PB&J sandwitch",
-      "lunch": "lunch",
-      "dinner": "dinner",
+      "breakFast": "pasta",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 4,
+      "id": 17
+    },
+    {
+      "breakFast": "idli",
+      "lunch": "",
+      "dinner": "",
       "dayId": 1,
-      "id": 12
+      "id": 18
+    },
+    {
+      "breakFast": "pasta",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 1,
+      "id": 19
+    },
+    {
+      "breakFast": "",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 1,
+      "id": 20
     }
   ],
   "days": [
@@ -73,40 +94,47 @@
   "groceries": [
     {
       "groceryName": "apples",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": 1,
+      "id": 1
+    },
+    {
+      "groceryName": "oranges",
       "quantity": "4 lb",
       "store": "Kroger",
-      "typeId": 2,
-      "id": 1
+      "typeId": 3,
+      "id": 2
     }
   ],
   "types": [
     {
       "type": "Dairy",
-      "id": "1"
+      "id": 1
     },
     {
       "type": "Produce",
-      "id": "2"
+      "id": 2
     },
     {
       "type": "Frozen",
-      "id": "3"
+      "id": 3
     },
     {
       "type": "Bakery",
-      "id": "4"
+      "id": 4
     },
     {
       "type": "Meat/Cheese",
-      "id": "5"
+      "id": 5
     },
     {
       "type": "Toitetries/Cleaning",
-      "id": "5"
+      "id": 6
     },
     {
       "type": "Misc",
-      "id": "6"
+      "id": 7
     }
   ]
 }
