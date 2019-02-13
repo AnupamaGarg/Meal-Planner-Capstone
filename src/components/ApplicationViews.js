@@ -62,7 +62,7 @@ export default class ApplicationViews extends Component {
 
     render() {
         return (
-            <React.Fragment className="divA">
+            <React.Fragment >
 
                 <Route
                  exact path="/"
