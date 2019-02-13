@@ -28,28 +28,29 @@ export default class MealCreateForm extends Component {
         const stateToChange = {}
         console.log(evt.target.value)
 
-        if (this.props.meals.find(e => e.dayId == evt.target.value)) {
-            window.alert("you will replace the existing meal for this day when you click save")
-            let id = evt.target.value
+        // if (this.props.meals.find(e => e.dayId == evt.target.value)) {
+        //     window.alert("you will replace the existing meal for this day when you click save")
+        //     let id = evt.target.value
             
 
-            fetch(`http://localhost:5002/meals?_expand=day/${id}`).then(e => e.json())
-            // fetch(`http://localhost:5002/days/?_embed=meals`).then(e => e.json())
+        //     fetch(`http://localhost:5002/meals?dayId=${id}`).then(e => e.json())
+        //     // fetch(`http://localhost:5002/days/?_embed=meals`).then(e => e.json())
 
-                // .then(mealsOftheDay => {this.props.deleteMeal(meals.id)})
+        //         .then(mealsOftheDay => {this.props.deleteMeal(mealsOftheDay[0].id)})
+        //         .then(ChangedmealsOftheDay => console.log(ChangedmealsOftheDay))
 
 
             //         this.setState({
             //             mealOftheDay: mealOftheDay
 
 
-            //         })})
+                    // })})
     
             
-                     .then(()=>console.log(id))
+                    //  .then(()=>console.log())
                     
 
-                }
+                // }
 
 
 
@@ -70,15 +71,24 @@ export default class MealCreateForm extends Component {
             if (this.state.dayId === "") {
                 window.alert("Please select the day")
             }
-            // elseif(this.props.meals.find(e => e.dayId == evt.target.value)) {
-            //     window.alert("This meal of day already exist. Please edit meal for this day")
-            //     }
-            else {
+            else if(this.props.meals.find(e => e.dayId == this.state.dayId)) {
+                window.alert("you will replace the existing meal for this day when you click save")
+            let id = this.state.dayId
+            
+
+            fetch(`http://localhost:5002/meals?dayId=${id}`).then(e => e.json())
+            // fetch(`http://localhost:5002/days/?_embed=meals`).then(e => e.json())
+
+                .then(mealsOftheDay => {this.props.deleteMeal(mealsOftheDay[0].id)})
+                .then(ChangedMealOftheDay => console.log(ChangedMealOftheDay))
+                }
+              {
                 const meal = {
                     breakFast: this.state.breakFast,
                     lunch: this.state.lunch,
                     dinner: this.state.dinner,
                     dayId: this.state.dayId
+                    
 
                 }
                 console.log("Gives the meal object", meal)

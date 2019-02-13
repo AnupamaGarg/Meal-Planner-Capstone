@@ -5,7 +5,15 @@ import { Link } from "react-router-dom";
 class MealList extends Component {
     render() {
         console.log(this.props.meals)
+    //    deleteThisMeal =()=>{
+    //     this.props.deleteMeal
+    //     .then(() => MealManager.getAll())
+    //     .then(allMeals => this.setState({
+    //       meals: allMeals
+    //     })
+    //     )
 
+    //    }
 
         return (
             <React.Fragment>

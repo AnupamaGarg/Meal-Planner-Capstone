@@ -13,60 +13,18 @@
   ],
   "meals": [
     {
-      "breakFast": "Juice and toast",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "3",
-      "id": 5
-    },
-    {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "5",
-      "id": 6
-    },
-    {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "4",
-      "id": 7
-    },
-    {
-      "breakFast": "poha",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": 2,
-      "id": 13
-    },
-    {
-      "breakFast": "pasta",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 4,
-      "id": 17
-    },
-    {
       "breakFast": "idli",
-      "lunch": "",
-      "dinner": "",
+      "lunch": "lunch",
+      "dinner": "dinner",
       "dayId": 1,
-      "id": 18
+      "id": 1
     },
     {
       "breakFast": "pasta",
-      "lunch": "",
+      "lunch": "lunch",
       "dinner": "",
-      "dayId": 1,
-      "id": 19
-    },
-    {
-      "breakFast": "",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 1,
-      "id": 20
+      "dayId": 2,
+      "id": 2
     }
   ],
   "days": [

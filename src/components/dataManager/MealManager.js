@@ -5,7 +5,7 @@ export default {
   //   return fetch(`${remoteURL}/meals?_expand=day/${id}`).then(e => e.json());
   // },
   get(id) {
-    return fetch(`http://localhost:5002/meals?_expand=day/${id}`).then(e => e.json());
+    return fetch(`http://localhost:5002/meals/${id}`).then(e => e.json());
   },
   getAll() {
     return fetch(`${remoteURL}/meals?_expand=day&_sort=dayId`).then(e => e.json());

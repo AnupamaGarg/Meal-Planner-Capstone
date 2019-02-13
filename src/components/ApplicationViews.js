@@ -11,7 +11,7 @@ import MealManager from './dataManager/MealManager'
 import GroceryManager from './dataManager/GroceryManager'
 import LoginManager from './dataManager/LoginManager'
 import NavBar from './nav/NavBar'
-import "./WeeklyPlanner.css"
+// import "./WeeklyPlanner.css"
 
 export default class ApplicationViews extends Component {
 
