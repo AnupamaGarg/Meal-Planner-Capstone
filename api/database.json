@@ -13,18 +13,18 @@
   ],
   "meals": [
     {
-      "breakFast": "idli",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": 1,
-      "id": 1
-    },
-    {
       "breakFast": "pasta",
       "lunch": "lunch",
       "dinner": "",
       "dayId": 2,
       "id": 2
+    },
+    {
+      "breakFast": "cc",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 1,
+      "id": 5
     }
   ],
   "days": [

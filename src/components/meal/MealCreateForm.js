@@ -63,6 +63,7 @@ export default class MealCreateForm extends Component {
         stateToChange[evt.target.id] = parseInt(evt.target.value)
         this.setState(stateToChange)
         // console.log(this.state.mealOftheDay.meals.id)
+        // if(confirm("Want to delete?"))
     
     }
 
@@ -73,15 +74,16 @@ export default class MealCreateForm extends Component {
             }
             else if(this.props.meals.find(e => e.dayId == this.state.dayId)) {
                 window.alert("you will replace the existing meal for this day when you click save")
-            let id = this.state.dayId
-            
-
-            fetch(`http://localhost:5002/meals?dayId=${id}`).then(e => e.json())
-            // fetch(`http://localhost:5002/days/?_embed=meals`).then(e => e.json())
-
+                // || confirm("Want to delete?")
+                let id = this.state.dayId
+                
+                
+                fetch(`http://localhost:5002/meals?dayId=${id}`).then(e => e.json())
+                // fetch(`http://localhost:5002/days/?_embed=meals`).then(e => e.json())
+                
                 .then(mealsOftheDay => {this.props.deleteMeal(mealsOftheDay[0].id)})
                 .then(ChangedMealOftheDay => console.log(ChangedMealOftheDay))
-                }
+            }
               {
                 const meal = {
                     breakFast: this.state.breakFast,
