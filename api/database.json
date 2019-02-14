@@ -1,45 +1,30 @@
 {
   "users": [
     {
-      "userName": "",
-      "userPassword": ""
+      "email": "dolly@email",
+      "Password": "abc",
+      "id": 1
+    },
+    {
+      "email": "sejal@email",
+      "Password": "abc",
+      "id": 2
     }
   ],
   "meals": [
     {
-      "breakFast": "milk",
+      "breakFast": "pasta",
       "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "2",
+      "dinner": "",
+      "dayId": 2,
       "id": 2
     },
     {
-      "breakFast": "idli",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "1",
-      "id": 3
-    },
-    {
-      "breakFast": "Juice and toast",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "3",
+      "breakFast": "cc",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 1,
       "id": 5
-    },
-    {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "5",
-      "id": 6
-    },
-    {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": "4",
-      "id": 7
     }
   ],
   "days": [
@@ -64,19 +49,50 @@
       "id": 5
     }
   ],
-  "grocerys": [
+  "groceries": [
     {
-      "grocery": "",
-      "quantity": "",
-      "store": "",
-      "userId": "",
-      "typeId": ""
+      "groceryName": "apples",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": 1,
+      "id": 1
+    },
+    {
+      "groceryName": "oranges",
+      "quantity": "4 lb",
+      "store": "Kroger",
+      "typeId": 3,
+      "id": 2
     }
   ],
-  "groceryTypes": [
+  "types": [
     {
-      "type": "",
-      "id": ""
+      "type": "Dairy",
+      "id": 1
+    },
+    {
+      "type": "Produce",
+      "id": 2
+    },
+    {
+      "type": "Frozen",
+      "id": 3
+    },
+    {
+      "type": "Bakery",
+      "id": 4
+    },
+    {
+      "type": "Meat/Cheese",
+      "id": 5
+    },
+    {
+      "type": "Toitetries/Cleaning",
+      "id": 6
+    },
+    {
+      "type": "Misc",
+      "id": 7
     }
   ]
 }
