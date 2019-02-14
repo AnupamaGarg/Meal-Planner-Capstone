@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import "./Grocery.css"
 
 export default class GroceryCreateForm extends Component {
     // Set initial state
@@ -6,7 +7,8 @@ export default class GroceryCreateForm extends Component {
         groceryName: "",
         quantity: "",
         store: "",
-        typeId: ""
+        typeId: "",
+        userId:JSON.parse(sessionStorage.getItem("userInfo")).userId,
 
 
     };
@@ -59,7 +61,9 @@ export default class GroceryCreateForm extends Component {
             groceryName: this.state.groceryName,
             quantity: this.state.quantity,
             store: this.state.store,
-            typeId: this.state.typeId
+            typeId: this.state.typeId,
+            userId:this.state.userId
+            // userId:JSON.parse(sessionStorage.getItem("userInfo")).userId
             // typeId: this.props.groceryTypes.find(e=>e.type === this.state.type).id     
         }
          
@@ -73,9 +77,9 @@ export default class GroceryCreateForm extends Component {
         return (
             <React.Fragment>
                 <div>
-                    <button
+                    {/* <button
                         onclick={this.GoToMealPlanner}
-                    >Go to Meal Planner</button>
+                    >Go to Meal Planner</button> */}
                 </div>
 
                 <form className="CreateGroceryForm">

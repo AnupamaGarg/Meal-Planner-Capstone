@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import "./meal.css"
+
 
 export default class MealCreateForm extends Component {
     // Set initial state
@@ -7,6 +9,7 @@ export default class MealCreateForm extends Component {
         lunch: "",
         dinner: "",
         dayId: "",
+        userId:JSON.parse(sessionStorage.getItem("userInfo")).userId,
         mealOftheDay: ""
 
 
@@ -73,7 +76,7 @@ export default class MealCreateForm extends Component {
                 window.alert("Please select the day")
             }
             else if(this.props.meals.find(e => e.dayId == this.state.dayId)) {
-                window.alert("you will replace the existing meal for this day when you click save")
+                window.alert("you are replacing the existing meal for this day")
                 // || confirm("Want to delete?")
                 let id = this.state.dayId
                 
@@ -89,12 +92,14 @@ export default class MealCreateForm extends Component {
                     breakFast: this.state.breakFast,
                     lunch: this.state.lunch,
                     dinner: this.state.dinner,
-                    dayId: this.state.dayId
+                    dayId: this.state.dayId,
+                    userId:this.state.userId
+                    // userId:JSON.parse(sessionStorage.getItem("userInfo")).userId
                     
 
                 }
                 console.log("Gives the meal object", meal)
-                this.props.addMeal(meal).then(() => this.props.history.push("/"))
+                this.props.addMeal(meal).then(() => this.props.history.push("/meal"))
             }
         }
         render() {

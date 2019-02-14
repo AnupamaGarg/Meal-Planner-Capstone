@@ -43,7 +43,7 @@ class GroceryList extends Component {
 
 
 
-                                    <Link className="nav-link" to={`/${grocery.id}/grocery/edit`}>Edit</Link>
+                                    <Link className="nav-link" to={`/grocery/${grocery.id}/edit`}>Edit</Link>
 
 
 

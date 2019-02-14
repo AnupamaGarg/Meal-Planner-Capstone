@@ -44,7 +44,7 @@ class MealList extends Component {
 
 
 
-                                    <Link className="nav-link" to={`/${meal.id}/edit`}>Edit</Link>
+                                    <Link className="nav-link" to={`/meal/${meal.id}/edit`}>Edit</Link>
 
 
 

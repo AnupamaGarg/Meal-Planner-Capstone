@@ -28,7 +28,7 @@ export default class MealEditForm extends Component {
             }
 
     this.props.updateMeal(this.props.match.params.mealId, existingMeal)
-    .then(() => this.props.history.push("/"))      
+    .then(() => this.props.history.push("/meal"))      
     }
 
     componentDidMount() {

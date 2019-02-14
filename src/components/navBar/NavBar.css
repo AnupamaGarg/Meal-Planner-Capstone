@@ -1,0 +1,46 @@
+/* .nav-link{
+    margin-left:1100px;
+} */
+.nav.nav-pills li{
+    color:orange;
+}
+nav{
+
+background-color:rgb(44, 41, 36);
+justify-content: center;
+
+/* background-color:linear-gradient(red, rgb(157, 255, 0)); */
+
+} 
+nav:hover{
+    opacity: 1;
+
+
+}
+a.nav-link{
+    
+color:orange;
+font-size:20px; 
+
+}
+a.nav-link:active {
+    background-color: rgb(207, 119, 18);
+    color: white;
+}
+a.nav-link:hover{
+    background-color: rgba(218, 125, 20, 0.966);
+    color: rgb(14, 12, 12);
+    text-decoration: none;
+    text-shadow: none;
+}
+
+#logout{
+    margin-left:1200px; 
+
+
+}
+#home{
+
+    color: orange !important;
+    /* font-weight: bold; */
+}
