@@ -15,8 +15,10 @@ export default class Home extends Component {
         <Container>
            <Container className="HomeCopy" pad={{vertical: 'none'}} primary={true}>
         <Title isSize="1" className="home-headline">
-          Plan what you want to eat this week :)
+          Weekly Meal Planner
+          
         </Title>
+        <h2>Plan what you want to eat this week :)</h2>
         <p tag="h2">To get started First Register or Sign-In</p>
         <Button>
             <Link className="SignIn"to={{

@@ -15,6 +15,19 @@ export default class MealCreateForm extends Component {
 
     };
 
+    clearFields=()=>{
+        document.querySelector("#breakFast").value="";
+        document.querySelector("#lunch").value="";
+        document.querySelector("#dinner").value="";
+        
+        this.setState({
+        groceryName: "",
+        quantity: "",
+        store: "",
+        typeId: ""
+        })
+      }
+
 
 
 
@@ -99,7 +112,9 @@ export default class MealCreateForm extends Component {
 
                 }
                 console.log("Gives the meal object", meal)
-                this.props.addMeal(meal).then(() => this.props.history.push("/meal"))
+                this.props.addMeal(meal)
+                .then (()=> this.clearFields())
+                .then(() => this.props.history.push("/meal"))
             }
         }
         render() {
@@ -114,6 +129,7 @@ export default class MealCreateForm extends Component {
             </div> */}
 
                     <form className="CreateMealForm">
+                    <div className= "mCreateDiv">
                         <div><b>Create Meal</b></div>
                         <div className="form-group">
                             <select required
@@ -175,7 +191,7 @@ export default class MealCreateForm extends Component {
                             onClick={this.constructNewMeal} className="btn btn-primary">
                             save</button>
 
-
+                   </div>
                     </form>
                 </React.Fragment>
             )

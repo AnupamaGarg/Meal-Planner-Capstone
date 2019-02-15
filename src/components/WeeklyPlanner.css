@@ -13,12 +13,17 @@
     display: flex;
  justify-content: center;
  justify-content: space-around;
- background-color: aquamarine;
+ background-color: goldenrod
+ /* background-color: aquamarine; */
 }
 
 .list{
     display: flex;
     flex-wrap:wrap;
+    
+    /* flex-direction: row; */
+    /* justify-content: space-around; */
+    /* flex-flow: row wrap; */
     
 }
 .eachListDiv{
@@ -32,5 +37,5 @@
  }  
  .GListHeading{
      text-align: center;
-    font: bold;
+    font-size: 2rem bold ;
  }

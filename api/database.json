@@ -1,15 +1,6 @@
 {
   "users": [
-    {
-      "email": "foo@foo",
-      "password": "foo",
-      "id": 1
-    },
-    {
-      "email": "foo@foo",
-      "password": "foo",
-      "id": 2
-    },
+    
     {
       "email": "dolly@225",
       "password": "dolly",
@@ -41,18 +32,59 @@
       "id": 8
     },
     {
-      "email": "xyz@gmail",
-      "password": "xyz",
-      "id": 9
+      "email": "abc@email",
+      "password": "123",
+      "id": 10
+    },
+    {
+      "email": "sonu@gmail",
+      "password": "sonu",
+      "id": 11
+    },
+    {
+      "email": "dolly@email.com",
+      "password": "dolly",
+      "id": 13
     }
   ],
   "meals": [
     {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "dinner",
+      "breakFast": "Oatmeal and Milk",
+      "lunch": "Veg Noodles",
+      "dinner": "Idli with Chutney",
       "dayId": 1,
       "id": 1
+    },
+    {
+      "breakFast": "Pancake and Fruits",
+      "lunch": "Mac and Cheese",
+      "dinner": "Veg Curry",
+      "dayId": 2,
+      "id": 2
+    },
+    {
+      "breakFast": "Omelete and Toast",
+      "lunch": "Whole wheat roll",
+      "dinner": "Cheese Quesadilla",
+      "dayId": 3,
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "breakFast": "Breakfast Pizza",
+      "lunch": "Tacos",
+      "dinner": "Spagetti",
+      "dayId": 4,
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "breakFast": "French Toast",
+      "lunch": "Veg Curry",
+      "dinner": "Pizza",
+      "dayId": 5,
+      "userId": 4,
+      "id": 5
     }
   ],
   "days": [
@@ -84,6 +116,35 @@
       "store": "Kroger",
       "typeId": 3,
       "id": 2
+    },
+    {
+      "groceryName": "apples",
+      "quantity": "4 lb",
+      "store": "Kroger",
+      "typeId": 2,
+      "id": 3
+    },
+    {
+      "groceryName": "Milk",
+      "quantity": "1 gallon",
+      "store": "Sprouts",
+      "typeId": 1,
+      "id": 4
+    },
+    {
+      "groceryName": "Cheese",
+      "quantity": "2 lb",
+      "store": "Sprouts",
+      "typeId": 1,
+      "id": 5
+    },
+    {
+      "groceryName": "Bread",
+      "quantity": "1 loaf",
+      "store": "Sprouts",
+      "typeId": 2,
+      "userId": 4,
+      "id": 6
     }
   ],
   "types": [
@@ -104,7 +165,7 @@
       "id": 4
     },
     {
-      "type": "Meat/Cheese",
+      "type": "Meat",
       "id": 5
     },
     {

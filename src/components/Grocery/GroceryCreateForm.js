@@ -13,17 +13,14 @@ export default class GroceryCreateForm extends Component {
 
     };
 
-    // GoToMealPlanner = () => {
-    //      { this.props.history.push("/") }
-    //          }
+    
      
 
     clearFields=()=>{
-        this.refs.groceryName.value="";
-        this.refs.quantity.value="";
-        this.refs.store.value="";
-        this.refs.typeId.value="";
-
+        document.querySelector("#groceryName").value="";
+        document.querySelector("#quantity").value="";
+        document.querySelector("#store").value="";
+        
         this.setState({
         groceryName: "",
         quantity: "",
@@ -83,13 +80,13 @@ export default class GroceryCreateForm extends Component {
                 </div>
 
                 <form className="CreateGroceryForm">
-                    <div><b>Create Grocery List</b></div>
+                    <div><h3><b>Create Grocery List</b></h3></div>
 
                     <div
                         className="form-group">
-                        <label htmlFor="grocery">GroceryName</label>
+                        <label htmlFor="grocery"><h4>GroceryName</h4></label>
                         <input maxlength="25"
-                               ref = "groceryName"
+                               refs = "groceryName"
                             type="text" required
                             className="form-control"
                             onChange={this.handleFieldChange}
@@ -98,7 +95,7 @@ export default class GroceryCreateForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="quantity">Quantity</label>
+                        <label htmlFor="quantity"><h4>Quantity</h4></label>
                         <input maxlength="25"
                         ref = "quantity"
                             type="text" required
@@ -111,7 +108,7 @@ export default class GroceryCreateForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="store">Store</label>
+                        <label htmlFor="store"><h4>Store</h4></label>
                         <input maxlength="25"
                              ref="store"
                             type="text" required

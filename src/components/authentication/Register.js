@@ -55,7 +55,7 @@ export default class Register extends Component {
                  type="password" 
                  placeholder="Password" 
                  onChange = {this.handleFieldChange}/>
-                 <button isColor='primary' type="submit">Submit</button>
+                 <button iscolor='primary' type="submit">Submit</button>
             </form>
             </div>
             </div>

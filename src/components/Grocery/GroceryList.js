@@ -10,7 +10,7 @@ class GroceryList extends Component {
 
         return (
             <React.Fragment>
-                  <div className="GListHeading"><b>GroceryList</b></div>
+                  <div className="GListHeading"><h3><b>GroceryList</b></h3></div>
                 <div className="glist">
 
                     <section className="grocery">

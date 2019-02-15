@@ -30,7 +30,7 @@ export default class ApplicationViews extends Component {
 
   }
 
-  // isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+  
   isAuthenticated = () =>
     localStorage.getItem("userInfo") !== null ||
     sessionStorage.getItem("userInfo") !== null
@@ -60,10 +60,7 @@ export default class ApplicationViews extends Component {
       .then(() => this.setState(newState))
     console.log(newState)
 
-    // LoginManager.getUser()
-    //   .then(allUsers => newState.users = allUsers)
-    //   .then(() => this.setState(newState))
-
+    
 
   }
   //////// DB calls Meal////////////////
