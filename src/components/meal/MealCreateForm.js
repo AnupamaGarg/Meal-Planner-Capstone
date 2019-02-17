@@ -71,7 +71,7 @@ export default class MealCreateForm extends Component {
 
 
 
-        //    console.log("testing")
+       
 
 
 
@@ -89,8 +89,9 @@ export default class MealCreateForm extends Component {
                 window.alert("Please select the day")
             }
             else if(this.props.meals.find(e => e.dayId == this.state.dayId)) {
-                window.alert("you are replacing the existing meal for this day")
-                // || confirm("Want to delete?")
+                window.confirm("it will replace the existing meal for this day")
+
+                
                 let id = this.state.dayId
                 
                 

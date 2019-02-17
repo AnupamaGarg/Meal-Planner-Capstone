@@ -3,22 +3,23 @@ import { Link } from "react-router-dom";
 
 
 class MealList extends Component {
+    deleteThisMealList =()=>{
+        if (window.confirm("Do you really want to delete?")) { 
+            this.props.meals.forEach(meal=>
+                this.props.deleteMeal(meal.id))
+          }
+       }
+       
+       
+   
     render() {
-        console.log(this.props.meals)
-    //    deleteThisMeal =()=>{
-    //     this.props.deleteMeal
-    //     .then(() => MealManager.getAll())
-    //     .then(allMeals => this.setState({
-    //       meals: allMeals
-    //     })
-    //     )
-
-    //    }
+    
 
         return (
             <React.Fragment>
 
-                <div className="list">
+                <div className="list" >
+                <button onClick={this.deleteThisMealList}>ClearWholeWeek </button>
 
                     <section className="meal">
                         {
