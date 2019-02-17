@@ -34,7 +34,7 @@
     flex-flow: row wrap;
    
     /* align-content: space-around */
- }  
+  }    
  .GListHeading{
      text-align: center;
     font-size: 2rem bold ;

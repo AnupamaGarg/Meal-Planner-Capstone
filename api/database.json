@@ -48,14 +48,6 @@
   ],
   "meals": [
     {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": 2,
-      "userId": 4,
-      "id": 2
-    },
-    {
       "breakFast": "idli",
       "lunch": "lunch",
       "dinner": "dinner",
@@ -86,44 +78,7 @@
       "id": 5
     }
   ],
-  "groceries": [
-    {
-      "groceryName": "oranges",
-      "quantity": "4 lb",
-      "store": "Kroger",
-      "typeId": 3,
-      "id": 2
-    },
-    {
-      "groceryName": "apples",
-      "quantity": "4 lb",
-      "store": "Kroger",
-      "typeId": 2,
-      "id": 3
-    },
-    {
-      "groceryName": "Milk",
-      "quantity": "1 gallon",
-      "store": "Sprouts",
-      "typeId": 1,
-      "id": 4
-    },
-    {
-      "groceryName": "Cheese",
-      "quantity": "2 lb",
-      "store": "Sprouts",
-      "typeId": 1,
-      "id": 5
-    },
-    {
-      "groceryName": "Bread",
-      "quantity": "1 loaf",
-      "store": "Sprouts",
-      "typeId": 2,
-      "userId": 4,
-      "id": 6
-    }
-  ],
+  "groceries": [],
   "types": [
     {
       "type": "Dairy",

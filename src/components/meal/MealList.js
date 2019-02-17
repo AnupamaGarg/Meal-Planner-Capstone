@@ -17,9 +17,10 @@ class MealList extends Component {
 
         return (
             <React.Fragment>
+                <button onClick={this.deleteThisMealList}>ClearWholeWeek </button>
 
                 <div className="list" >
-                <button onClick={this.deleteThisMealList}>ClearWholeWeek </button>
+                
 
                     <section className="meal">
                         {

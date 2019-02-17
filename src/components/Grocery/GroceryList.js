@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 class GroceryList extends Component {
     render() {
         // console.log(this.props.groceries)
-               
+
 
 
         return (
             <React.Fragment>
-                  <div className="GListHeading"><h3><b>GroceryList</b></h3></div>
+                <div className="GListHeading"><h3><b>GroceryList</b></h3></div>
                 <div className="glist">
 
                     <section className="grocery">
-                    {/* {
+                        {/* {
                         this.props.types.map( type => {
                         if(type.id === this.props.grocery.type.typeId){
                             return (<h4 key={type.id}>{type.type}</h4>)
@@ -23,21 +23,21 @@ class GroceryList extends Component {
                     } */}
                         {
                             this.props.groceries.map(grocery =>
-                                
-                                <div className="eachListDiv" key={grocery.id}>
-                                    
-                                    <input type="checkbox" id="myCheck"/>
+
+                                <div className="eachListDiv" id={grocery.id} key={grocery.id}>
+
+                                    <input type="checkbox"  />
                                     <h4>{grocery.groceryName} </h4>
                                     <h4>{grocery.quantity} </h4>
                                     <h4>{grocery.store} </h4>
                                     {/* <h4>{grocery.type.type} </h4> */}
                                     <h4>{grocery.type ? grocery.type.type : ""} </h4>
-                                    
-                                    
+
+
 
                                     <a href="#"
-                                        onClick={() => this.props.deleteGrocery(grocery.id)}
-                                        className="card-link">Delete</a>
+                                        onClick={() => this.props.deleteGrocery()}
+                                        >Delete</a>
                                     <br></br>
 
 
@@ -48,7 +48,7 @@ class GroceryList extends Component {
 
 
 
-                                    
+
                                 </div>
 
                             )
