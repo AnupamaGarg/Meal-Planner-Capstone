@@ -17,10 +17,12 @@ export default class MealCreateForm extends Component {
     
 
     clearFields = () => {
-        document.querySelector("#dayId").value="";
+        // document.querySelector("#breakFast").value = "";
+        // document.querySelector("#lunch").value = "";
+        // document.querySelector("#dinner").value = "";
 
        return this.setState({
-            dayId:"",
+            // dayId: "",
             breakFast: "",
             lunch: "",
             dinner: ""
@@ -38,20 +40,53 @@ export default class MealCreateForm extends Component {
 
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
-        // evt.currentTarget.reset();
     }
     handleDropDownChange = evt => {
         const stateToChange = {}
         console.log(evt.target.value)
 
+        // if (this.props.meals.find(e => e.dayId == evt.target.value)) {
+        //     window.alert("you will replace the existing meal for this day when you click save")
+        //     let id = evt.target.value
+
+
+        //     fetch(`http://localhost:5002/meals?dayId=${id}`).then(e => e.json())
+        //     // fetch(`http://localhost:5002/days/?_embed=meals`).then(e => e.json())
+
+        //         .then(mealsOftheDay => {this.props.deleteMeal(mealsOftheDay[0].id)})
+        //         .then(ChangedmealsOftheDay => console.log(ChangedmealsOftheDay))
+
+
+        //         this.setState({
+        //             mealOftheDay: mealOftheDay
+
+
+        // })})
+
+
+        //  .then(()=>console.log())
+
+
+        // }
+
+
+
+
+
+
+
+
+
         stateToChange[evt.target.id] = parseInt(evt.target.value)
         this.setState(stateToChange)
-        
+        // console.log(this.state.mealOftheDay.meals.id)
+        // if(confirm("Want to delete?"))
+
     }
-    
+
     constructNewMeal = evt => {
         evt.preventDefault()
-        if (this.state.dayId === ""||this.state.dayId === null) {
+        if (this.state.dayId === "") {
             window.alert("Please select the day")
         }
         else if (this.props.meals.find(e => e.dayId == this.state.dayId)) {
@@ -83,7 +118,6 @@ export default class MealCreateForm extends Component {
 
             console.log("Gives the meal object", meal)
             this.props.addMeal(meal)
-                
                 .then(() => this.clearFields())
                 .then(() => this.props.history.push("/meal"))
         }
@@ -94,7 +128,7 @@ export default class MealCreateForm extends Component {
                 dinner: this.state.dinner,
                 dayId: this.state.dayId,
                 userId: this.state.userId
-                
+                // userId:JSON.parse(sessionStorage.getItem("userInfo")).userId
             }
                     
 
@@ -113,16 +147,22 @@ export default class MealCreateForm extends Component {
         console.log(this.props.days)
         return (
             <React.Fragment>
+                {/* <div>
+                 <fieldset>
+                    <label>BreakFast</label>
+                    <input type="text" onChange={this.handleFieldChange} id ="bf" value = {this.state.breakFast}>
+                </fieldset>
+            </div> */}
+
                 <form className="CreateMealForm">
                     <div className="mCreateDiv">
                         <div><b>Create Meal</b></div>
                         <div className="form-group">
                             <select 
-                                defaultValue=""
+                            // defaultValue=""
                                 className="form-control"
                                 onChange={this.handleDropDownChange}
                                 id="dayId">
-
                                 <option 
                                 value=""
                                 >Select Day</option>
@@ -181,7 +221,7 @@ export default class MealCreateForm extends Component {
 
 
                         <button type="Submit"
-                            onClick={this.constructNewMeal}  className="btn btn-primary">
+                            onClick={this.constructNewMeal} className="btn btn-primary">
                             save</button>
 
                     </div>

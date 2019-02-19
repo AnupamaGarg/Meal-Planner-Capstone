@@ -39,3 +39,13 @@
      text-align: center;
     font-size: 2rem bold ;
  }
+ .mealComponent{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: first baseline
+ }
+ .meal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+ }

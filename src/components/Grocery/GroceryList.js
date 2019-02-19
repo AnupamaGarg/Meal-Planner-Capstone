@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 
 
 class GroceryList extends Component {
+
+    deleteThisGroceryList =()=>{
+        if (window.confirm("Do you really want to delete whole List?")) { 
+            this.props.groceries.forEach(grocery=>
+                this.props.deleteGrocery(grocery.id))
+          }
+       }
     render() {
         // console.log(this.props.groceries)
 
@@ -10,7 +17,7 @@ class GroceryList extends Component {
 
         return (
             <React.Fragment>
-                <div className="GListHeading"><h3><b>GroceryList</b></h3></div>
+                <div className="GListHeading"><h3><b>GroceryList</b></h3><button id="deteleWholeList" onClick={this.deleteThisGroceryList}>Clear All </button></div>
                 <div className="glist">
 
                     <section className="grocery">
@@ -36,7 +43,7 @@ class GroceryList extends Component {
 
 
                                     <a href="#"
-                                        onClick={() => this.props.deleteGrocery()}
+                                        onClick={() => this.props.deleteGrocery(grocery.id)}
                                         >Delete</a>
                                     <br></br>
 

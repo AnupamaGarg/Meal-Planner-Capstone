@@ -12,6 +12,7 @@ import MealManager from './dataManager/MealManager'
 import GroceryManager from './dataManager/GroceryManager'
 import LoginManager from './dataManager/LoginManager'
 import Home from './Home/Home'
+import ReactToPrint from "react-to-print"
 
 // import "./WeeklyPlanner.css"
 
@@ -32,7 +33,7 @@ export default class ApplicationViews extends Component {
 
   
   isAuthenticated = () =>
-    localStorage.getItem("userInfo") !== null ||
+    // localStorage.getItem("userInfo") !== null ||
     sessionStorage.getItem("userInfo") !== null
 
   componentDidMount() {
@@ -136,15 +137,24 @@ export default class ApplicationViews extends Component {
         <Route exact path="/meal" render={props => {
           if (this.isAuthenticated()) {
             return <React.Fragment>
+              <div className="mealComponent">
               <MealCreateForm className="div" {...props}
                 addMeal={this.newMeal}
                 days={this.state.days}
                 meals={this.state.meals}
                 deleteMeal={this.deleteMeal} />
 
+
+                <ReactToPrint trigger={() => <button className="printButton">Print</button>}
+                content={() => this.componentRef}
+                                  />
+
               <MealList className="div" {...props}{...this.props}
                 meals={this.state.meals}
-                deleteMeal={this.deleteMeal} />
+                deleteMeal={this.deleteMeal} 
+                ref={el => (this.componentRef = el)}
+                />
+</div>
             </React.Fragment>
           } else {
             return <Redirect to="/Login"/>

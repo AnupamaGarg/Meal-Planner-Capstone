@@ -48,12 +48,12 @@
   ],
   "meals": [
     {
-      "breakFast": "idli",
-      "lunch": "lunch",
-      "dinner": "dinner",
+      "breakFast": "",
+      "lunch": "",
+      "dinner": "",
       "dayId": 1,
       "userId": 4,
-      "id": 4
+      "id": 1
     }
   ],
   "days": [

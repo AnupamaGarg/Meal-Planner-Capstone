@@ -20,8 +20,9 @@ export default class GroceryCreateForm extends Component {
         document.querySelector("#groceryName").value="";
         document.querySelector("#quantity").value="";
         document.querySelector("#store").value="";
+        document.querySelector("#typeId").value="";
         
-        this.setState({
+        return this.setState({
         groceryName: "",
         quantity: "",
         store: "",
@@ -53,8 +54,12 @@ export default class GroceryCreateForm extends Component {
    
     constructNewgrocery = evt => {
         evt.preventDefault()
+        if (this.state.typeId === ""||this.state.dayId === null) {
+            window.alert("Please select the type")
+        }
     
-        const newGrocery = {
+       else{
+            const newGrocery = {
             groceryName: this.state.groceryName,
             quantity: this.state.quantity,
             store: this.state.store,
@@ -67,6 +72,7 @@ export default class GroceryCreateForm extends Component {
         this.props.addGrocery(newGrocery)
         .then (()=> this.clearFields())
         .then(() => this.props.history.push("/grocery"))
+    }
 
     }
     render() {
