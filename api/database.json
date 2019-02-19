@@ -1,30 +1,59 @@
 {
   "users": [
     {
-      "email": "dolly@email",
-      "Password": "abc",
-      "id": 1
+      "email": "dolly@225",
+      "password": "dolly",
+      "id": 3
+    },
+    {
+      "email": "abc@email",
+      "password": "abc",
+      "id": 4
     },
     {
       "email": "sejal@email",
-      "Password": "abc",
-      "id": 2
+      "password": "sejal",
+      "id": 5
+    },
+    {
+      "email": "andy@email",
+      "password": "andy",
+      "id": 6
+    },
+    {
+      "email": "anu@gmail.com",
+      "password": "anu",
+      "id": 7
+    },
+    {
+      "email": "dimple@email",
+      "password": "dimple",
+      "id": 8
+    },
+    {
+      "email": "abc@email",
+      "password": "123",
+      "id": 10
+    },
+    {
+      "email": "sonu@gmail",
+      "password": "sonu",
+      "id": 11
+    },
+    {
+      "email": "dolly@email.com",
+      "password": "dolly",
+      "id": 13
     }
   ],
   "meals": [
     {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "",
-      "dayId": 2,
-      "id": 2
-    },
-    {
-      "breakFast": "cc",
+      "breakFast": "",
       "lunch": "",
       "dinner": "",
       "dayId": 1,
-      "id": 5
+      "userId": 4,
+      "id": 1
     }
   ],
   "days": [
@@ -49,22 +78,7 @@
       "id": 5
     }
   ],
-  "groceries": [
-    {
-      "groceryName": "apples",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": 1,
-      "id": 1
-    },
-    {
-      "groceryName": "oranges",
-      "quantity": "4 lb",
-      "store": "Kroger",
-      "typeId": 3,
-      "id": 2
-    }
-  ],
+  "groceries": [],
   "types": [
     {
       "type": "Dairy",
@@ -83,7 +97,7 @@
       "id": 4
     },
     {
-      "type": "Meat/Cheese",
+      "type": "Meat",
       "id": 5
     },
     {

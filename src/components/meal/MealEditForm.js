@@ -28,7 +28,7 @@ export default class MealEditForm extends Component {
             }
 
     this.props.updateMeal(this.props.match.params.mealId, existingMeal)
-    .then(() => this.props.history.push("/"))      
+    .then(() => this.props.history.push("/meal"))      
     }
 
     componentDidMount() {
@@ -48,7 +48,7 @@ export default class MealEditForm extends Component {
         return (
             <React.Fragment>
                 <form className="CreateMealForm">
-               
+                <div className= "mEditCreateDiv">
                 
                     <div
                             className="form-group">
@@ -83,6 +83,7 @@ export default class MealEditForm extends Component {
                             />
                         </div>
                       <button type="submit" onClick={this.updateExistingMeal} className="btn btn-primary">Save</button>
+                      </div>
                 </form>
             </React.Fragment>
         )

@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import "./Grocery.css"
 
 export default class GroceryCreateForm extends Component {
     // Set initial state
@@ -6,23 +7,22 @@ export default class GroceryCreateForm extends Component {
         groceryName: "",
         quantity: "",
         store: "",
-        typeId: ""
+        typeId: "",
+        userId:JSON.parse(sessionStorage.getItem("userInfo")).userId,
 
 
     };
 
-    // GoToMealPlanner = () => {
-    //      { this.props.history.push("/") }
-    //          }
+    
      
 
     clearFields=()=>{
-        this.refs.groceryName.value="";
-        this.refs.quantity.value="";
-        this.refs.store.value="";
-        this.refs.typeId.value="";
-
-        this.setState({
+        document.querySelector("#groceryName").value="";
+        document.querySelector("#quantity").value="";
+        document.querySelector("#store").value="";
+        document.querySelector("#typeId").value="";
+        
+        return this.setState({
         groceryName: "",
         quantity: "",
         store: "",
@@ -54,18 +54,25 @@ export default class GroceryCreateForm extends Component {
    
     constructNewgrocery = evt => {
         evt.preventDefault()
+        if (this.state.typeId === ""||this.state.dayId === null) {
+            window.alert("Please select the type")
+        }
     
-        const newGrocery = {
+       else{
+            const newGrocery = {
             groceryName: this.state.groceryName,
             quantity: this.state.quantity,
             store: this.state.store,
-            typeId: this.state.typeId
+            typeId: this.state.typeId,
+            userId:this.state.userId
+            // userId:JSON.parse(sessionStorage.getItem("userInfo")).userId
             // typeId: this.props.groceryTypes.find(e=>e.type === this.state.type).id     
         }
          
         this.props.addGrocery(newGrocery)
         .then (()=> this.clearFields())
         .then(() => this.props.history.push("/grocery"))
+    }
 
     }
     render() {
@@ -73,19 +80,19 @@ export default class GroceryCreateForm extends Component {
         return (
             <React.Fragment>
                 <div>
-                    <button
+                    {/* <button
                         onclick={this.GoToMealPlanner}
-                    >Go to Meal Planner</button>
+                    >Go to Meal Planner</button> */}
                 </div>
 
                 <form className="CreateGroceryForm">
-                    <div><b>Create Grocery List</b></div>
+                    <div><h3><b>Create Grocery List</b></h3></div>
 
                     <div
                         className="form-group">
-                        <label htmlFor="grocery">GroceryName</label>
+                        <label htmlFor="grocery"><h4>GroceryName</h4></label>
                         <input maxlength="25"
-                               ref = "groceryName"
+                               refs = "groceryName"
                             type="text" required
                             className="form-control"
                             onChange={this.handleFieldChange}
@@ -94,7 +101,7 @@ export default class GroceryCreateForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="quantity">Quantity</label>
+                        <label htmlFor="quantity"><h4>Quantity</h4></label>
                         <input maxlength="25"
                         ref = "quantity"
                             type="text" required
@@ -107,7 +114,7 @@ export default class GroceryCreateForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="store">Store</label>
+                        <label htmlFor="store"><h4>Store</h4></label>
                         <input maxlength="25"
                              ref="store"
                             type="text" required
