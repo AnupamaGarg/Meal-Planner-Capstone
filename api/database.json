@@ -46,16 +46,7 @@
       "id": 13
     }
   ],
-  "meals": [
-    {
-      "breakFast": "",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 1,
-      "userId": 4,
-      "id": 1
-    }
-  ],
+  "meals": [],
   "days": [
     {
       "name": "Monday",
@@ -78,7 +69,56 @@
       "id": 5
     }
   ],
-  "groceries": [],
+  "groceries": [
+    {
+      "groceryName": "oranges",
+      "quantity": "4 lb",
+      "store": "Kroger",
+      "typeId": 2,
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "groceryName": "oranges",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": 4,
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "groceryName": "apples",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": 2,
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "groceryName": "apples",
+      "quantity": "",
+      "store": "",
+      "typeId": 6,
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "groceryName": "Naan",
+      "quantity": "1pack",
+      "store": "sprouts",
+      "typeId": 7,
+      "userId": 4,
+      "id": 8
+    },
+    {
+      "groceryName": "apples",
+      "quantity": "2 lb",
+      "store": "sprouts",
+      "typeId": 6,
+      "userId": 4,
+      "id": 9
+    }
+  ],
   "types": [
     {
       "type": "Dairy",
@@ -101,7 +141,7 @@
       "id": 5
     },
     {
-      "type": "Toitetries/Cleaning",
+      "type": "Toiletries",
       "id": 6
     },
     {
