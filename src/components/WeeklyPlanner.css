@@ -9,43 +9,26 @@
     background-color: aqua
 } */
 
-.CreateGroceryForm{
-    display: flex;
- justify-content: center;
- justify-content: space-around;
- background-color: goldenrod
- /* background-color: aquamarine; */
-}
 
-.list{
+
+/* .list{
     display: flex;
     flex-wrap:wrap;
     
     /* flex-direction: row; */
     /* justify-content: space-around; */
     /* flex-flow: row wrap; */
-    
-}
-.eachListDiv{
+    /* border: .5rem solid black */
 
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: space-around;
-    flex-flow: row wrap;
-   
-    /* align-content: space-around */
-  }    
- .GListHeading{
-     text-align: center;
-    font-size: 2rem bold ;
- }
- .mealComponent{
+    
+/* }  */
+  
+
+  
+
+  .mealComponent{
      display: flex;
      flex-wrap: wrap;
      justify-content: first baseline
- }
- .meal{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between
- }
+ } 
+ 

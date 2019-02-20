@@ -13,6 +13,8 @@ import GroceryManager from './dataManager/GroceryManager'
 import LoginManager from './dataManager/LoginManager'
 import Home from './Home/Home'
 import ReactToPrint from "react-to-print"
+import "./meal/meal.css"
+
 
 // import "./WeeklyPlanner.css"
 
@@ -137,7 +139,7 @@ export default class ApplicationViews extends Component {
         <Route exact path="/meal" render={props => {
           if (this.isAuthenticated()) {
             return <React.Fragment>
-              <div className="mealComponent">
+    <div className="mealComponent">
               <MealCreateForm className="div" {...props}
                 addMeal={this.newMeal}
                 days={this.state.days}
@@ -154,7 +156,7 @@ export default class ApplicationViews extends Component {
                 deleteMeal={this.deleteMeal} 
                 ref={el => (this.componentRef = el)}
                 />
-</div>
+    </div>
             </React.Fragment>
           } else {
             return <Redirect to="/Login"/>

@@ -17,7 +17,7 @@ class GroceryList extends Component {
 
         return (
             <React.Fragment>
-                <div className="GListHeading"><h3><b>GroceryList</b></h3><button id="deteleWholeList" onClick={this.deleteThisGroceryList}>Clear All </button></div>
+                <div className="GListHeading"><h3><b>GroceryList</b></h3><a href="#" id="deteleWholeList" onClick={this.deleteThisGroceryList}>Clear All </a></div>
                 <div className="glist">
 
                     <section className="grocery">

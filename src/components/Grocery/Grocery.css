@@ -1,3 +1,54 @@
 .CreateGroceryForm{
     margin-top:50px;
 }
+
+.CreateGroceryForm{
+    display: flex;
+ justify-content: center;
+ justify-content: space-around;
+ background-color: goldenrod
+ /* background-color: aquamarine; */
+}
+.eachListDiv{
+
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    flex-flow: row wrap;
+    border: .1rem solid goldenrod;
+    list-style: height 1.6em;
+   
+    /* align-content: space-around */
+  }    
+
+  #deteleWholeList{
+font-size:18px;
+      float: right;
+      margin-right: 5em;
+
+  }
+  #deteleWholeList:hover {
+    text-decoration: underline;
+  }
+  
+  #deteleWholeList:active {
+    color: black;
+  }
+  
+  #deteleWholeList:visited {
+    color: purple;
+  }
+  
+ .GListHeading{
+     text-align: center;
+    font-size: 2rem bold ;
+ }
+ #typeId{
+     margin-top: 55px
+ }
+ /* .btn{
+     margin-top: 54px
+ } */
+ .glist{
+     margin-top: 3em
+ }

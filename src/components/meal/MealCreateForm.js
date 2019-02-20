@@ -115,7 +115,7 @@ export default class MealCreateForm extends Component {
             <React.Fragment>
                 <form className="CreateMealForm">
                     <div className="mCreateDiv">
-                        <div><b>Create Meal</b></div>
+                        <div><h3><b>Create Meal</b></h3></div>
                         <div className="form-group">
                             <select 
                                 defaultValue=""

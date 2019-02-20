@@ -46,7 +46,40 @@
       "id": 13
     }
   ],
-  "meals": [],
+  "meals": [
+    {
+      "breakFast": "",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 3,
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "breakFast": "pasta breakfast",
+      "lunch": "lunch lunch",
+      "dinner": "dinner dinner",
+      "dayId": 4,
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "breakFast": "pasta pasts",
+      "lunch": "lunch lunch",
+      "dinner": "pasta lunch",
+      "dayId": 2,
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "breakFast": "pasta",
+      "lunch": "lunch",
+      "dinner": "pasta",
+      "dayId": 1,
+      "userId": 4,
+      "id": 6
+    }
+  ],
   "days": [
     {
       "name": "Monday",
@@ -96,10 +129,9 @@
     },
     {
       "groceryName": "apples",
-      "quantity": "",
-      "store": "",
+      "quantity": "2 lb",
+      "store": "sprouts",
       "typeId": 6,
-      "userId": 4,
       "id": 7
     },
     {
