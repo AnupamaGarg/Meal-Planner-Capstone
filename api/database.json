@@ -44,40 +44,69 @@
       "email": "dolly@email.com",
       "password": "dolly",
       "id": 13
+    },
+    {
+      "email": "foo@foo",
+      "password": "foo",
+      "id": 14
     }
   ],
   "meals": [
     {
-      "breakFast": "",
+      "breakFast": "dd",
       "lunch": "",
       "dinner": "",
       "dayId": 3,
       "userId": 4,
-      "id": 3
+      "id": 2
     },
     {
-      "breakFast": "pasta breakfast",
-      "lunch": "lunch lunch",
-      "dinner": "dinner dinner",
-      "dayId": 4,
+      "breakFast": "dd",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 2,
       "userId": 4,
       "id": 4
     },
     {
-      "breakFast": "pasta pasts",
-      "lunch": "lunch lunch",
-      "dinner": "pasta lunch",
-      "dayId": 2,
+      "breakFast": "dd",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 4,
       "userId": 4,
       "id": 5
     },
     {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "pasta",
+      "breakFast": "dd",
+      "lunch": "",
+      "dinner": "",
       "dayId": 1,
       "userId": 4,
-      "id": 6
+      "id": 9
+    },
+    {
+      "breakFast": "dd",
+      "lunch": "",
+      "dinner": "dd",
+      "dayId": 5,
+      "userId": 4,
+      "id": 10
+    },
+    {
+      "breakFast": "aa",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 2,
+      "userId": 14,
+      "id": 12
+    },
+    {
+      "breakFast": "aa",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 1,
+      "userId": 14,
+      "id": 13
     }
   ],
   "days": [
@@ -143,12 +172,20 @@
       "id": 8
     },
     {
-      "groceryName": "apples",
-      "quantity": "2 lb",
-      "store": "sprouts",
-      "typeId": 6,
-      "userId": 4,
+      "groceryName": "Bread",
+      "quantity": "",
+      "store": "",
+      "typeId": 1,
+      "userId": 6,
       "id": 9
+    },
+    {
+      "groceryName": "Milk",
+      "quantity": "",
+      "store": "",
+      "typeId": 1,
+      "userId": 6,
+      "id": 10
     }
   ],
   "types": [

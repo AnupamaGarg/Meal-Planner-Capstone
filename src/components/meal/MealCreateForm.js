@@ -54,18 +54,19 @@ export default class MealCreateForm extends Component {
         if (this.state.dayId === ""||this.state.dayId === null) {
             window.alert("Please select the day")
         }
-        else if (this.props.meals.find(e => e.dayId == this.state.dayId)) {
-            window.confirm("it will replace the existing meal for this day")
+        else if (this.props.meals.find(e => e.dayId == this.state.dayId && e.userId==this.state.userId)) {
+            alert("it will replace the existing meal for this day")
 
 
-            let id = this.state.dayId
+            // let id = this.state.dayId
+            // let userId = this.state.userId
 
 
-            fetch(`http://localhost:5002/meals?dayId=${id}`).then(e => e.json())
+            fetch(`http://localhost:5002/meals?userId=${this.state.userId}&dayId=${this.state.dayId}`).then(e => e.json())
                 // fetch(`http://localhost:5002/days/?_embed=meals`).then(e => e.json())
 
                 .then(mealsOftheDay => { this.props.deleteMeal(mealsOftheDay[0].id) })
-                .then(ChangedMealOftheDay => console.log(ChangedMealOftheDay))
+                // .then(ChangedMealOftheDay => console.log(ChangedMealOftheDay))
 
 
 
@@ -141,7 +142,7 @@ export default class MealCreateForm extends Component {
                         <div
                             className="form-group">
                             <label htmlFor="breakFast">BreakFast</label>
-                            <input maxlength="25"
+                            <input maxLength="25"
                                 type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
@@ -152,7 +153,7 @@ export default class MealCreateForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="Lunch">Lunch</label>
-                            <input maxlength="25"
+                            <input maxLength="25"
                                 type="text" required
                                 className="form-control"
 
@@ -164,7 +165,7 @@ export default class MealCreateForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="url">Dinner</label>
-                            <input maxlength="25"
+                            <input maxLength="25"
                                 type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}

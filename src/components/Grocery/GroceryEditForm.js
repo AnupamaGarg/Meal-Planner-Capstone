@@ -63,7 +63,7 @@ export default class GroceryEditForm extends Component {
                     <div
                             className="form-group">
                             <label htmlFor="grocery">GroceryName</label>
-                            <input maxlength="25" 
+                            <input maxLength="25" 
                                 type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
@@ -74,7 +74,7 @@ export default class GroceryEditForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="quantity">Quantity</label>
-                            <input maxlength="25" 
+                            <input maxLength="25" 
                                 type="text" required
                                 className="form-control"
                             
@@ -87,7 +87,7 @@ export default class GroceryEditForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="store">Store</label>
-                            <input maxlength="25" 
+                            <input maxLength="25" 
                                 type="text" required
                                 className="form-control"
                                 defaultValue="" 

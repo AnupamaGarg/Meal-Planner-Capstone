@@ -11,7 +11,9 @@ export default class NavBar extends Component {
 logoutFunction = ()=>
     {
         sessionStorage.clear();
-        window.location.href="http://localhost:3000";
+        // console.log("")
+        // this.props.history.push("/")
+        // window.location.href="http://localhost:3000";
     }
 
     render() {
@@ -30,8 +32,8 @@ logoutFunction = ()=>
                     
                     
                     
-                    <li className ="nav-item">
-                    <NavLink href="#" onClick={this.logoutFunction} id="logout" >Logout</NavLink>
+                    <li className ="nav-item" onClick={this.logoutFunction} >
+                    <NavLink href="/" id="logout" >Logout</NavLink>
                      </li> 
                 </ul>
                

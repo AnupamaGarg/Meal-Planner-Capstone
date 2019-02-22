@@ -25,15 +25,29 @@ export default class ApplicationViews extends Component {
     days: [],
     groceries: [],
     types: [],
-    activeUser: sessionStorage.getItem("usersId")
+    userId: sessionStorage.getItem("userInfo")
+    // userId: JSON.parse(sessionStorage.getItem("userInfo")).userId
+}
 
-    // activeUser: localStorage.getItem("usersId")
 
 
 
+  
+
+  getloggedUserMealsGroceries=()=>{
+    MealManager.getAll()
+    .then(allMeals => this.setState({meals:allMeals}))
+         
+    GroceryManager.getAll()
+      .then(allgroceries => this.setState({groceries:allgroceries}))
+
+    
   }
 
   
+
+
+
   isAuthenticated = () =>
     // localStorage.getItem("userInfo") !== null ||
     sessionStorage.getItem("userInfo") !== null
@@ -43,25 +57,30 @@ export default class ApplicationViews extends Component {
     fetch("http://localhost:5002/days")
       .then(r => r.json())
       .then(alldays => newState.days = alldays)
-
+      .then(() => this.setState(newState))
     // fetch("http://localhost:5002/meals?_expand=day&_sort=dayId")
     // .then(r => r.json())
-    MealManager.getAll()
-      .then(allMeals => newState.meals = allMeals)
-      .then(() => this.setState(newState))
-    console.log(newState)
 
+    
+   
+    // MealManager.getAll()
+    //   .then(allMeals => newState.meals = allMeals)
+    //   .then(() => this.setState(newState))
+    // console.log(newState)
+    
+    
 
     fetch("http://localhost:5002/types")
       .then(r => r.json())
       .then(allTypes => newState.types = allTypes)
+      .then(() => this.setState(newState))
 
     // fetch("http://localhost:5002/groceries?_expand=type")
     // .then(r => r.json())
-    GroceryManager.getAll()
-      .then(allgroceries => newState.groceries = allgroceries)
-      .then(() => this.setState(newState))
-    console.log(newState)
+  //   GroceryManager.getAll()
+  //     .then(allgroceries => newState.groceries = allgroceries)
+  //     .then(() => this.setState(newState))
+  //   console.log(newState)
 
     
 
@@ -121,6 +140,7 @@ export default class ApplicationViews extends Component {
 
 
   render() {
+    console.log(this.state)
     return (
       <React.Fragment >
         
@@ -129,7 +149,9 @@ export default class ApplicationViews extends Component {
         }} />
 
         <Route exact path="/Login" render={props => {
-          return <Login  {...props}/>
+          return <Login  {...props}
+          getloggedUserMealsGroceries={this.getloggedUserMealsGroceries}
+          />
         }} />
 
         <Route exact path="/Register" render={props => {
@@ -139,7 +161,7 @@ export default class ApplicationViews extends Component {
         <Route exact path="/meal" render={props => {
           if (this.isAuthenticated()) {
             return <React.Fragment>
-    <div className="mealComponent">
+           <div className="mealComponent">
               <MealCreateForm className="div" {...props}
                 addMeal={this.newMeal}
                 days={this.state.days}
@@ -148,8 +170,7 @@ export default class ApplicationViews extends Component {
 
 
                 <ReactToPrint trigger={() => <button className="printButton">Print</button>}
-                content={() => this.componentRef}
-                                  />
+                content={() => this.componentRef}/>
 
               <MealList className="div" {...props}{...this.props}
                 meals={this.state.meals}
