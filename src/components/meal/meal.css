@@ -7,6 +7,8 @@
 
 .form-group {
     display: table-caption;
+    width: 180px;
+  height: 70px;
 }
 
 .mCreateDiv {
@@ -14,7 +16,7 @@
     /* margin-right: 100px; */
     text-align: -webkit-center;
     width: 250px;
-  height: 500px;
+  height: 450px;
   background:goldenrod;
   /* background: rgb(201, 224, 71); */
   margin-left: auto;
@@ -79,15 +81,18 @@ padding: .3em
 
 
 .card {
-    width: 15rem;
-    height:24rem
+    width: 12rem;
+    height:20rem
+
 }
 
 .card-body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; 
+    width: 200px;
+  height: 250px;
 }
 .card-title{
     text-decoration-line: underline;
@@ -131,16 +136,25 @@ padding: .3em
 .listComponent{
     display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
-   flex-direction:column;
+   /* justify-content: space-between; */
+   flex-direction:row; 
    /* display: table-caption; */
    /* text-align: -webkit-center; */
 
    
     
-}
+ } 
 h4{ 
     /* border-block-end-style: outset */
+}
+
+.meal{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    flex-direction:row; 
+    width: 750px;
+  height: 600px;
 }
 /* .card{
     transition: 0.9s;

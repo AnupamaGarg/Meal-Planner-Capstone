@@ -169,7 +169,7 @@ export default class ApplicationViews extends Component {
                 deleteMeal={this.deleteMeal} />
 
 
-                <ReactToPrint trigger={() => <button className="printButton">Print</button>}
+              <div className="printList">  <ReactToPrint trigger={() => <a  href="#"className="printLink">Print</a>}
                 content={() => this.componentRef}/>
 
               <MealList className="div" {...props}{...this.props}
@@ -177,6 +177,7 @@ export default class ApplicationViews extends Component {
                 deleteMeal={this.deleteMeal} 
                 ref={el => (this.componentRef = el)}
                 />
+                </div>
     </div>
             </React.Fragment>
           } else {

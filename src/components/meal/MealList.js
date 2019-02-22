@@ -19,38 +19,43 @@ class MealList extends Component {
 
         return (
             <React.Fragment>
-                <div className="listComponent" >
-                <div className="list" ref={el => (this.componentRef = el)}>
+                
+                    <div className="listComponent" ref={el => (this.componentRef = el)}>
 
-                    <div className="card"><h2 className="card-title">My Meal Plan</h2> 
-                    {/* <img // src={image} className="image" /> */}
-                    <a href="#"  id="deteleWholeList" onClick={this.deleteThisMealList}>Clear All </a></div>
-
-
-                    
+                        {/* <div className="card"><h2 className="card-title">My Meal Plan</h2>
+                            {/* <img // src={image} className="image" /> */}
+                            {/* <a href="#" id="deteleWholeList" onClick={this.deleteThisMealList}>Clear All </a> */}
+                        {/* </div> */} 
 
 
-                        <section
-                            // className="card meal-card"
-                            className="meal"
-                        >
+
+
+
+                        <div className="meal">
+                            {/* // className="card meal-card" */}
+                            <div className="card"><h3 className="card-heading">My Meal Plan</h3>
+                            {/* <img // src={image} className="image" /> */}
+                            <a href="#" id="deteleWholeList" onClick={this.deleteThisMealList}>Clear All </a>
+                        </div>
+                            
+                        
                             {
                                 this.props.meals.map(meal =>
 
                                     <div className="card" id={meal.day.name} key={meal.id}>
                                         <div className="card-body" >
-                                            <h3 className="card-title">{meal.day ? meal.day.name : ""}</h3>
+                                            <h4 className="card-title">{meal.day ? meal.day.name : ""}</h4>
                                             {/* <h3>{meal.day.name}</h3> */}
 
                                             {/* <h4>BreakFast -{meal.breakFast} </h4> */}
-                                            <h4>BreakFast</h4>
-                                            <h5><i>{meal.breakFast} </i></h5>
+                                            <h5>BreakFast</h5>
+                                            <h6><i>{meal.breakFast} </i></h6>
 
-                                            <h4>Lunch</h4>
-                                            <h5><i>{meal.lunch} </i></h5>
+                                            <h5>Lunch</h5>
+                                            <h6><i>{meal.lunch} </i></h6>
 
-                                            <h4>Dinner</h4>
-                                            <h5><i>{meal.dinner} </i></h5>
+                                            <h5>Dinner</h5>
+                                            <h6><i>{meal.dinner} </i></h6>
                                         </div>
                                         <div className="links">
                                             <Link className="nav-link" to={`/meal/${meal.id}/edit`}>Edit</Link>
@@ -75,10 +80,10 @@ class MealList extends Component {
 
                                 )
                             }
-                        </section>
+                        </div>
 
                     </div>
-                </div>
+                
             </React.Fragment>
         )
     }

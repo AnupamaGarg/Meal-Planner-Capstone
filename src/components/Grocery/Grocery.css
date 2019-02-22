@@ -22,9 +22,11 @@
   }    
 
   #deteleWholeList{
-font-size:18px;
+     font-size:20px;
       float: right;
       margin-right: 5em;
+      background-color:yellowgreen;
+      padding: .2rem
 
   }
   #deteleWholeList:hover {
