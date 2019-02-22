@@ -17,9 +17,9 @@ export default class GroceryCreateForm extends Component {
      
 
     clearFields=()=>{
-        // document.querySelector("#groceryName").value="";
-        // document.querySelector("#quantity").value="";
-        // document.querySelector("#store").value="";
+        document.querySelector("#groceryName").value="";
+        document.querySelector("#quantity").value="";
+        document.querySelector("#store").value="";
         document.querySelector("#typeId").value="";
         
         return this.setState({

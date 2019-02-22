@@ -107,6 +107,14 @@
       "dayId": 1,
       "userId": 14,
       "id": 13
+    },
+    {
+      "breakFast": "milk and biscuit",
+      "lunch": "aloo ki pranti",
+      "dinner": "rajma chavel",
+      "dayId": 5,
+      "userId": 14,
+      "id": 15
     }
   ],
   "days": [
@@ -149,7 +157,7 @@
       "id": 4
     },
     {
-      "groceryName": "apples",
+      "groceryName": "Gala apples",
       "quantity": "2 lb",
       "store": "Kroger",
       "typeId": 2,
@@ -162,14 +170,6 @@
       "store": "sprouts",
       "typeId": 6,
       "id": 7
-    },
-    {
-      "groceryName": "Naan",
-      "quantity": "1pack",
-      "store": "sprouts",
-      "typeId": 7,
-      "userId": 4,
-      "id": 8
     },
     {
       "groceryName": "Bread",
@@ -186,6 +186,22 @@
       "typeId": 1,
       "userId": 6,
       "id": 10
+    },
+    {
+      "groceryName": "Naan",
+      "quantity": "2 lb",
+      "store": "Kroger",
+      "typeId": 1,
+      "userId": 4,
+      "id": 11
+    },
+    {
+      "groceryName": "Whole Milk",
+      "quantity": "2 g",
+      "store": "Kroger",
+      "typeId": 1,
+      "userId": 14,
+      "id": 12
     }
   ],
   "types": [

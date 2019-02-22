@@ -7,7 +7,8 @@ export default class GroceryEditForm extends Component {
         groceryName: "",
         quantity: "",
         store: "",
-        typeId:""
+        typeId:"",
+        userId: JSON.parse(sessionStorage.getItem("userInfo")).userId
         
 
     };
@@ -31,7 +32,8 @@ export default class GroceryEditForm extends Component {
             groceryName: this.state.groceryName,
             quantity: this.state.quantity,
             store: this.state.store,
-            typeId: this.state.typeId
+            typeId: this.state.typeId,
+            userId: this.state.userId
                  
         }
         
