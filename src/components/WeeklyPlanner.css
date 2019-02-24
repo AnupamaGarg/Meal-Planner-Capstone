@@ -1,27 +1,4 @@
-/* .meal{
-    line-height: 1.6;
-    text-align: center;
-    background-color:lightcoral
-}
-.divA{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: aqua
-} */
 
-
-
-/* .list{
-    display: flex;
-    flex-wrap:wrap;
-    
-    /* flex-direction: row; */
-    /* justify-content: space-around; */
-    /* flex-flow: row wrap; */
-    /* border: .5rem solid black */
-
-    
-/* }  */
   
 
   
@@ -31,7 +8,17 @@
      flex-wrap: wrap;
      flex-direction: row;
      /* justify-content: first baseline; */
-     justify-content:space-around
+     justify-content:space-around;
+     /* backgroundImage: `url(${cherry})` */
+  }
+     
+     .groceryComponent{
+      display: flex;
+      /* flex-wrap: wrap; */
+      flex-direction: row;
+      justify-content: first baseline;
+      justify-content:space-around;
+      /* backgroundImage: `url(${cherry})` */
      
     
  } 
@@ -40,18 +27,19 @@
     margin-top: 100px;
     /* width: 550px;
   height: 550px; */
+  
  }
  .printLink{
     background-color: #3c78ef;
     color: #fff;
-    margin: 13px 0 0 10px;
-    padding: 6px 9px 6px 9px;
+    /* margin: 0px 0 0 10px; */
+    padding: 6px 15px 6px 15px;
 
     height: 40px;
     border-radius: 4px;
 
     /* float: center; */
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     /* padding: px 5px 18px 15px; */
     cursor: pointer;

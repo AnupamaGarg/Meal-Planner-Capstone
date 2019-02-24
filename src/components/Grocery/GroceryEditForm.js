@@ -59,8 +59,10 @@ export default class GroceryEditForm extends Component {
         return (
             <React.Fragment>
                 
-                   <form className="CreateMealForm">
-                   <div><b>Edit Grocery List</b></div>
+                   <form 
+                //    className="CreateGroceryF/orm" 
+                   >
+                   <div className= "mEditCreateDiv"><b>Edit Grocery List</b>
                     
                     <div
                             className="form-group">
@@ -120,7 +122,7 @@ export default class GroceryEditForm extends Component {
 
 
                         <button type="submit" onClick={this.updateExistingGrocery} className="btn btn-primary">Save</button>
-                        
+                        </div> 
                 </form>
             </React.Fragment>
                 )

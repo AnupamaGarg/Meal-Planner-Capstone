@@ -1,6 +1,4 @@
-/* .eachListDiv{
-    list-style: height 1.6em;
-} */
+
 .CreateMealForm{
     margin-top: 50px;
 }
@@ -8,7 +6,7 @@
 .form-group {
     display: table-caption;
     width: 180px;
-  height: 70px;
+  height: 65px;
 }
 
 .mCreateDiv {
@@ -17,7 +15,7 @@
     text-align: -webkit-center;
     width: 250px;
   height: 450px;
-  background:goldenrod;
+  background:mediumaquamarine;
   /* background: rgb(201, 224, 71); */
   margin-left: auto;
   margin-right: auto;
@@ -41,7 +39,7 @@
   font-size: 1rem bold;
 }
 .form-control{          
-    margin-top: 10px;
+    margin-top: 5px;
     border: none;
     background:rgb(218, 225, 231);
     margin-left: 5px;
@@ -62,15 +60,15 @@
 }
 .card-link{
     color:red;
-font-size:20px; 
-margin: 12px 0 0 0;
-padding: .3em
+font-size:16px; 
+/* margin: 12px 0; */
+/* padding-bottom: .5em */
 
 }
 .card-link:active {
     background-color:red;
     color: white;
-    padding: .5em
+    /* padding-bottom:.5em */
 }
 .card-link:hover{
     background-color:red;
@@ -100,7 +98,7 @@ padding: .3em
 
 }
 .links{
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 
@@ -110,11 +108,11 @@ padding: .3em
 
 }
 #Tuesday{
-    background:rgb(248, 190, 81);
+    background:rgb(247, 200, 114);
 
 }
 #Wednesday{
-    background:lightsteelblue;
+    background:lightgreen;
 
 }
 #Thursday{
@@ -125,12 +123,6 @@ padding: .3em
     background:plum;
 
 }
-
-/* .mealComponent{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: first baseline
-} */
 
 
 .listComponent{
@@ -178,3 +170,17 @@ h4{
     align-self: auto;
     box-shadow: 0 23px 8px 0 orange;
  }   */
+.intro-card{
+    background-color:lightblue
+}
+#mealClearAll{
+  background-color:lightblue;
+  font-size:20px;
+  float: right;
+  color: red;
+  padding-left: 1em
+
+}
+#editLink{
+    padding: .3em
+}

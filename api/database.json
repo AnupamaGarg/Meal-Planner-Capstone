@@ -53,38 +53,6 @@
   ],
   "meals": [
     {
-      "breakFast": "dd",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 3,
-      "userId": 4,
-      "id": 2
-    },
-    {
-      "breakFast": "dd",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 2,
-      "userId": 4,
-      "id": 4
-    },
-    {
-      "breakFast": "dd",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 4,
-      "userId": 4,
-      "id": 5
-    },
-    {
-      "breakFast": "dd",
-      "lunch": "",
-      "dinner": "dd",
-      "dayId": 5,
-      "userId": 4,
-      "id": 10
-    },
-    {
       "breakFast": "aa",
       "lunch": "",
       "dinner": "",
@@ -109,12 +77,44 @@
       "id": 15
     },
     {
-      "breakFast": "pasta idli",
-      "lunch": "lunch pasta",
-      "dinner": "bbbbbbbbbb",
+      "breakFast": "idli",
+      "lunch": "dosa",
+      "dinner": "pasta",
       "dayId": 1,
       "userId": 4,
       "id": 16
+    },
+    {
+      "breakFast": "idli",
+      "lunch": "pasta",
+      "dinner": "dosa",
+      "dayId": 2,
+      "userId": 4,
+      "id": 17
+    },
+    {
+      "breakFast": "pasta",
+      "lunch": "pasta",
+      "dinner": "pasta",
+      "dayId": 3,
+      "userId": 4,
+      "id": 18
+    },
+    {
+      "breakFast": "pasta",
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": 4,
+      "userId": 4,
+      "id": 19
+    },
+    {
+      "breakFast": "pasta",
+      "lunch": "lunch",
+      "dinner": "dinner",
+      "dayId": 5,
+      "userId": 4,
+      "id": 20
     }
   ],
   "days": [
@@ -155,14 +155,6 @@
       "typeId": 4,
       "userId": 4,
       "id": 4
-    },
-    {
-      "groceryName": "Gala apples",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": 2,
-      "userId": 4,
-      "id": 6
     },
     {
       "groceryName": "apples",

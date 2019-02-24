@@ -86,11 +86,11 @@ export default class GroceryCreateForm extends Component {
                 </div>
 
                 <form className="CreateGroceryForm">
-                    <div><h3><b>Create Grocery List</b></h3></div>
+                    <div><h4><b>Create Grocery List</b></h4></div>
 
                     <div
                         className="form-group">
-                        <label htmlFor="grocery"><h4>GroceryName</h4></label>
+                        <label htmlFor="grocery">GroceryName</label>
                         <input maxLength="25"
                                refs = "groceryName"
                             type="text" required
@@ -101,7 +101,7 @@ export default class GroceryCreateForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="quantity"><h4>Quantity</h4></label>
+                        <label htmlFor="quantity">Quantity</label>
                         <input maxLength="25"
                         ref = "quantity"
                             type="text" required
@@ -114,7 +114,7 @@ export default class GroceryCreateForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="store"><h4>Store</h4></label>
+                        <label htmlFor="store">Store</label>
                         <input maxLength="25"
                              ref="store"
                             type="text" required

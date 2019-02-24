@@ -14,9 +14,10 @@ import LoginManager from './dataManager/LoginManager'
 import Home from './Home/Home'
 import ReactToPrint from "react-to-print"
 import "./meal/meal.css"
+import cherry from "./cherry_large (5).png"
 
 
-// import "./WeeklyPlanner.css"
+import "./WeeklyPlanner.css"
 
 export default class ApplicationViews extends Component {
 
@@ -28,7 +29,6 @@ export default class ApplicationViews extends Component {
     userId: sessionStorage.getItem("userInfo")
     // userId: JSON.parse(sessionStorage.getItem("userInfo")).userId
 }
-
 
 
 
@@ -161,7 +161,9 @@ export default class ApplicationViews extends Component {
         <Route exact path="/meal" render={props => {
           if (this.isAuthenticated()) {
             return <React.Fragment>
-           <div className="mealComponent">
+           <div 
+          //  style={{backgroundImage: "url(" + cherry + ")"}}
+           className="mealComponent">
               <MealCreateForm className="div" {...props}
                 addMeal={this.newMeal}
                 days={this.state.days}
@@ -201,6 +203,7 @@ export default class ApplicationViews extends Component {
                 render={props => {
                   if (this.isAuthenticated()) {
                   return <React.Fragment>
+                    <div class="groceryComponent">
                     <GroceryCreateForm className="div" {...props}
                       addGrocery={this.newGrocery}
                       types={this.state.types}
@@ -210,6 +213,7 @@ export default class ApplicationViews extends Component {
                       groceries={this.state.groceries}
                       deleteGrocery={this.deleteGrocery}
                       types={this.state.types} />
+                      </div>
                   </React.Fragment>
                   } else {
                     return <Redirect to="/Login"/>
