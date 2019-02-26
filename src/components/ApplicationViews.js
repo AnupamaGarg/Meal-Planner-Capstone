@@ -203,7 +203,7 @@ export default class ApplicationViews extends Component {
                 render={props => {
                   if (this.isAuthenticated()) {
                   return <React.Fragment>
-                    <div class="groceryComponent">
+                    <div className="groceryComponent">
                     <GroceryCreateForm className="div" {...props}
                       addGrocery={this.newGrocery}
                       types={this.state.types}

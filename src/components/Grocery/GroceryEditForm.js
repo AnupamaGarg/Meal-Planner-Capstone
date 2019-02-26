@@ -22,7 +22,13 @@ export default class GroceryEditForm extends Component {
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
-       
+    handleDropDownChange = evt => {
+        const stateToChange = {}
+        // console.log(evt.target.id, evt.target.value);
+
+        stateToChange[evt.target.id] = parseInt(evt.target.value)
+        this.setState(stateToChange)
+    }
         
     
 
@@ -59,9 +65,7 @@ export default class GroceryEditForm extends Component {
         return (
             <React.Fragment>
                 
-                   <form 
-                //    className="CreateGroceryF/orm" 
-                   >
+                   <form >
                    <div className= "mEditCreateDiv"><b>Edit Grocery List</b>
                     
                     <div
@@ -94,7 +98,7 @@ export default class GroceryEditForm extends Component {
                             <input maxLength="25" 
                                 type="text" required
                                 className="form-control"
-                                defaultValue="" 
+                                // defaultValue="" 
                                 onChange={this.handleFieldChange}
                                 id="store"
                                 value={this.state.store}
@@ -104,10 +108,13 @@ export default class GroceryEditForm extends Component {
                         <div className="form-group">
                             <select required
                             className="form-control"
-                            
+                            value= {this.state.typeId}
                             onChange={this.handleDropDownChange }
                             id="typeId">
-                                <option value="">Select Type</option>
+                                <option 
+                                value=""
+                               
+                                >Select Type</option>
                                 {this.props.types.map(e =>(
                                     <option key={e.id} value={e.id}>
                                     {e.type}
@@ -118,7 +125,9 @@ export default class GroceryEditForm extends Component {
                                 </select>
 
                         </div>
+                        
 
+                        
 
 
                         <button type="submit" onClick={this.updateExistingGrocery} className="btn btn-primary">Save</button>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-// import dog from "../../image/123mealplan.jpg"
 import thumbnail_1 from "./thumbnail_small (1).png"
 import image from "./mealNew2.jpg"
 import "./meal.css"
@@ -8,7 +7,7 @@ import "./meal.css"
 
 class MealList extends Component {
     deleteThisMealList = () => {
-        if (window.confirm("Do you really want to delete menu of the whole week?")) {
+        if (window.confirm("Do you really want to delete the menu for the whole week?")) {
             this.props.meals.forEach(meal =>
                 this.props.deleteMeal(meal.id))
         }
@@ -64,7 +63,7 @@ class MealList extends Component {
                                             <h6><i>{meal.dinner} </i></h6>
                                         </div>
                                         <div className="links">
-                                            <Link id="editLink"className="nav-link" to={`/meal/${meal.id}/edit`}>Edit</Link>
+                                            <Link id="editLinkMeals"className="card-link-edit" to={`/meal/${meal.id}/edit`}>Edit</Link>
 
 
 

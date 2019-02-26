@@ -17,7 +17,7 @@ export default class Home extends Component {
           //  primary={true}
           >
         <Title isSize="1" className="home-headline">
-          Weekly Meal Planner
+          Weekly Meal Planner and Grocery List
           
         </Title>
         <h2>Plan what you want to eat this week :)</h2>

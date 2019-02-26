@@ -6,7 +6,7 @@
 }
 nav{
 
-background-color:rgb(44, 41, 36);
+background-color:black;
 justify-content: center;
 
 /* background-color:linear-gradient(red, rgb(157, 255, 0)); */
@@ -19,8 +19,10 @@ nav:hover{
 }
 a.nav-link{
     
-color:orangered;
+/* color: rgb(37, 250, 179); */
+color: #26c6da;
 font-size:16px; 
+
 
 }
 a.nav-link:active {
@@ -36,6 +38,8 @@ a.nav-link:hover{
 
 #logout{
     margin-left:950px; 
+
+
 
 
 }

@@ -19,7 +19,7 @@ class GroceryList extends Component {
             <React.Fragment>
                 <div className="glist">
 
-                <div className="GListHeading"><h3><b>GroceryList</b></h3><a href="#" class="deteleWholeList" onClick={this.deleteThisGroceryList}>Clear All </a></div>
+                <div className="GListHeading"><h3><b>GroceryList</b></h3><a href="#" className="deteleWholeList" onClick={this.deleteThisGroceryList}>Clear All </a></div>
                 
 
                     <section className="grocery">
@@ -35,7 +35,7 @@ class GroceryList extends Component {
 
                                 <div className="eachListDiv" id={grocery.id} key={grocery.id}>
 
-                                    <input  class = "checkBox"type="checkbox"  />
+                                    <input  className = "checkBox" type="checkbox"  />
                                     <h5>{grocery.groceryName} </h5>
                                     <h5>{grocery.quantity} </h5>
                                     <h5>{grocery.store} </h5>
@@ -52,7 +52,7 @@ class GroceryList extends Component {
 
 
 
-                                    <Link className="nav-link" to={`/grocery/${grocery.id}/edit`}>Edit</Link>
+                                    <Link className="card-link-edit" to={`/grocery/${grocery.id}/edit`}>Edit</Link>
 
 
 

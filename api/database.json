@@ -49,74 +49,14 @@
       "email": "foo@foo",
       "password": "foo",
       "id": 14
-    }
-  ],
-  "meals": [
-    {
-      "breakFast": "aa",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 2,
-      "userId": 14,
-      "id": 12
     },
     {
-      "breakFast": "aa",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 1,
-      "userId": 14,
-      "id": 13
-    },
-    {
-      "breakFast": "milk and biscuit",
-      "lunch": "aloo ki pranti",
-      "dinner": "rajma chavel",
-      "dayId": 5,
-      "userId": 14,
+      "email": "Jisie@email.com",
+      "password": "Jisie",
       "id": 15
-    },
-    {
-      "breakFast": "idli",
-      "lunch": "dosa",
-      "dinner": "pasta",
-      "dayId": 1,
-      "userId": 4,
-      "id": 16
-    },
-    {
-      "breakFast": "idli",
-      "lunch": "pasta",
-      "dinner": "dosa",
-      "dayId": 2,
-      "userId": 4,
-      "id": 17
-    },
-    {
-      "breakFast": "pasta",
-      "lunch": "pasta",
-      "dinner": "pasta",
-      "dayId": 3,
-      "userId": 4,
-      "id": 18
-    },
-    {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": 4,
-      "userId": 4,
-      "id": 19
-    },
-    {
-      "breakFast": "pasta",
-      "lunch": "lunch",
-      "dinner": "dinner",
-      "dayId": 5,
-      "userId": 4,
-      "id": 20
     }
   ],
+  "meals": [],
   "days": [
     {
       "name": "Monday",
@@ -139,63 +79,7 @@
       "id": 5
     }
   ],
-  "groceries": [
-    {
-      "groceryName": "oranges",
-      "quantity": "4 lb",
-      "store": "Kroger",
-      "typeId": 2,
-      "userId": 4,
-      "id": 2
-    },
-    {
-      "groceryName": "oranges",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": 4,
-      "userId": 4,
-      "id": 4
-    },
-    {
-      "groceryName": "apples",
-      "quantity": "2 lb",
-      "store": "sprouts",
-      "typeId": 6,
-      "id": 7
-    },
-    {
-      "groceryName": "Bread",
-      "quantity": "",
-      "store": "",
-      "typeId": 1,
-      "userId": 6,
-      "id": 9
-    },
-    {
-      "groceryName": "Milk",
-      "quantity": "",
-      "store": "",
-      "typeId": 1,
-      "userId": 6,
-      "id": 10
-    },
-    {
-      "groceryName": "Naan",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": 1,
-      "userId": 4,
-      "id": 11
-    },
-    {
-      "groceryName": "Whole Milk",
-      "quantity": "2 g",
-      "store": "Kroger",
-      "typeId": 1,
-      "userId": 14,
-      "id": 12
-    }
-  ],
+  "groceries": [],
   "types": [
     {
       "type": "Dairy",

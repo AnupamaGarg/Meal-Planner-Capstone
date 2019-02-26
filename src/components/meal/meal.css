@@ -1,6 +1,13 @@
 
 .CreateMealForm{
     margin-top: 50px;
+    /* background-image: url("./backgroundCherry.png");
+    background-size: 100%; */
+
+
+}
+#editLinkMeals{
+    /* background-color:green  */
 }
 
 .form-group {
@@ -15,7 +22,9 @@
     text-align: -webkit-center;
     width: 250px;
   height: 450px;
-  background:mediumaquamarine;
+  /* background:#5fe2f3; */
+  background:#26c6da;
+  /* background:rgb(123, 243, 203); */
   /* background: rgb(201, 224, 71); */
   margin-left: auto;
   margin-right: auto;
@@ -60,18 +69,32 @@
 }
 .card-link{
     color:red;
-font-size:16px; 
-/* margin: 12px 0; */
+font-size:18px; 
+margin:18px;
+/* background-color:#66cdaa; */
+margin-bottom: 10px;
+font-weight: bold
+
+/* width:150px; */
 /* padding-bottom: .5em */
 
 }
+.card-link-edit{
+    color:blue;
+font-size:18px; 
+margin:25px;
+/* background-color:#66cdaa; */
+margin-bottom: 10px;
+font-weight: bold
+}
+
 .card-link:active {
-    background-color:red;
+    /* background-color:red; */
     color: white;
     /* padding-bottom:.5em */
 }
 .card-link:hover{
-    background-color:red;
+    /* background-color:red; */
     color: rgb(14, 12, 12);
     text-decoration: none;
     text-shadow: none;
@@ -98,7 +121,7 @@ font-size:16px;
 
 }
 .links{
-    /* display: inline-block; */
+    display: inline;
 }
 
 

@@ -9,7 +9,10 @@
      flex-direction: row;
      /* justify-content: first baseline; */
      justify-content:space-around;
-     /* backgroundImage: `url(${cherry})` */
+    
+     /* background-image: url("./backgroundCherry.png"); */
+    /* background-size: 25%; */
+    /* background-color: rgb(253, 230, 234) */
   }
      
      .groceryComponent{
@@ -18,8 +21,10 @@
       flex-direction: row;
       justify-content: first baseline;
       justify-content:space-around;
-      /* backgroundImage: `url(${cherry})` */
-     
+      
+      /* background-image: url("./backgroundCherry.png"); */
+      /* background-size: 25%; */
+      /* background-color: rgb(247, 226, 229) */
     
  } 
 
