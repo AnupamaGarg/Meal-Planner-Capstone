@@ -30,13 +30,13 @@
     justify-content: space-around;
     flex-flow: row wrap;
     /* border: .1rem solid goldenrod; */
-    list-style: height 1em;
+    /* list-style: height 1em; */
     width: 780px;
     border-bottom: .1em solid mediumaquamarine;
     margin-top: .5em
    
     /* align-content: space-around */
-  }    
+  }   
   .checkBox{
       align-content: center
   }
@@ -77,4 +77,20 @@
     
     
      
+ }
+ .g-card-link{
+    color:red;
+    font-size:18px; 
+    /* margin:18px; */
+    /* background-color:#66cdaa; */
+    margin-bottom: 10px;
+    font-weight: bold
+ }
+ .g-card-link-edit{
+    color:blue;
+font-size:18px; 
+/* margin:25px; */
+/* background-color:#66cdaa; */
+margin-bottom: 10px;
+font-weight: bold
  }

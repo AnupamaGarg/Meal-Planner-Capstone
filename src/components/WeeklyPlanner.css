@@ -10,9 +10,9 @@
      /* justify-content: first baseline; */
      justify-content:space-around;
     
-     /* background-image: url("./backgroundCherry.png"); */
-    /* background-size: 25%; */
-    /* background-color: rgb(253, 230, 234) */
+     background-image: url("./backgroundCherry.png");
+    background-size: 15%;
+    /* background-color:lightblue */
   }
      
      .groceryComponent{
@@ -22,8 +22,9 @@
       justify-content: first baseline;
       justify-content:space-around;
       
-      /* background-image: url("./backgroundCherry.png"); */
-      /* background-size: 25%; */
+      background-image: url("./backgroundCherry.png");
+      background-size: 15%;
+    background-blend-mode: lighten
       /* background-color: rgb(247, 226, 229) */
     
  } 

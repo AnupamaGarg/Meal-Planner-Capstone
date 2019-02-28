@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "email": "dolly@225",
-      "password": "dolly",
-      "id": 3
-    },
-    {
       "email": "abc@email",
       "password": "abc",
       "id": 4
@@ -21,31 +16,6 @@
       "id": 6
     },
     {
-      "email": "anu@gmail.com",
-      "password": "anu",
-      "id": 7
-    },
-    {
-      "email": "dimple@email",
-      "password": "dimple",
-      "id": 8
-    },
-    {
-      "email": "abc@email",
-      "password": "123",
-      "id": 10
-    },
-    {
-      "email": "sonu@gmail",
-      "password": "sonu",
-      "id": 11
-    },
-    {
-      "email": "dolly@email.com",
-      "password": "dolly",
-      "id": 13
-    },
-    {
       "email": "foo@foo",
       "password": "foo",
       "id": 14
@@ -54,9 +24,55 @@
       "email": "Jisie@email.com",
       "password": "Jisie",
       "id": 15
+    },
+    {
+      "email": "dolly@email.com",
+      "password": "dolly",
+      "id": 16
     }
   ],
-  "meals": [],
+  "meals": [
+    {
+      "breakFast": "",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 2,
+      "userId": 16,
+      "id": 2
+    },
+    {
+      "breakFast": "",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 3,
+      "userId": 16,
+      "id": 3
+    },
+    {
+      "breakFast": "",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 4,
+      "userId": 16,
+      "id": 4
+    },
+    {
+      "breakFast": "",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 5,
+      "userId": 16,
+      "id": 5
+    },
+    {
+      "breakFast": "",
+      "lunch": "",
+      "dinner": "",
+      "dayId": 1,
+      "userId": 16,
+      "id": 6
+    }
+  ],
   "days": [
     {
       "name": "Monday",

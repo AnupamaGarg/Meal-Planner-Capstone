@@ -44,7 +44,7 @@ class GroceryList extends Component {
 
 
 
-                                    <a href="#" className="card-link"
+                                    <a href="#" className="g-card-link"
                                         onClick={() => this.props.deleteGrocery(grocery.id)}
                                         >Delete</a>
                                     <br></br>
@@ -52,7 +52,7 @@ class GroceryList extends Component {
 
 
 
-                                    <Link className="card-link-edit" to={`/grocery/${grocery.id}/edit`}>Edit</Link>
+                                    <Link className="g-card-link-edit" to={`/grocery/${grocery.id}/edit`}>Edit</Link>
 
 
 

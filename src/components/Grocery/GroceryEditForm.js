@@ -65,7 +65,7 @@ export default class GroceryEditForm extends Component {
         return (
             <React.Fragment>
                 
-                   <form >
+                   <form  autoComplete="off">
                    <div className= "mEditCreateDiv"><b>Edit Grocery List</b>
                     
                     <div

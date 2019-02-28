@@ -51,7 +51,7 @@ export default class MealEditForm extends Component {
     render() {
         return (
             <React.Fragment>
-                <form className="CreateMealForm">
+                <form className="CreateMealForm"  autoComplete="off">
                 <div className= "mEditCreateDiv">
                 
                     <div

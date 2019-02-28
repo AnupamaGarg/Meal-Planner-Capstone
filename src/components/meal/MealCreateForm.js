@@ -57,7 +57,7 @@ export default class MealCreateForm extends Component {
         }
 
         else if (this.props.meals.find(e => e.dayId == this.state.dayId && e.userId == this.state.userId)) {
-            alert("it will replace the existing meal for this day")
+            alert("This will replace the existing meal")
 
 
             // let id = this.state.dayId
