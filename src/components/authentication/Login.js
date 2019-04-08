@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LoginManager from "../dataManager/LoginManager"
 import "./Login.css"
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
     // set initial state
@@ -90,11 +91,12 @@ export default class Login extends Component {
                                 <button
                                     type="submit">
                                     Submit
-                </button>
+                                </button>
 
                             </div>
+                            <div><Link className="Register" to={{ pathname: "/Register"}}>Register</Link></div>
                         </form>
-                    </div>
+                    </div>   
                 </div>
             </div>
 
