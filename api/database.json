@@ -29,48 +29,58 @@
       "email": "dolly@email.com",
       "password": "dolly",
       "id": 16
+    },
+    {
+      "email": "abc@email",
+      "password": "abc",
+      "id": 17
+    },
+    {
+      "email": "sonu@gmail",
+      "password": "Sonu8*",
+      "id": 18
     }
   ],
   "meals": [
     {
-      "breakFast": "",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 2,
-      "userId": 16,
-      "id": 2
-    },
-    {
-      "breakFast": "",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 3,
-      "userId": 16,
-      "id": 3
-    },
-    {
-      "breakFast": "",
-      "lunch": "",
-      "dinner": "",
+      "breakFast": "Waffles",
+      "lunch": "Noodles",
+      "dinner": "Paneer with Naan",
       "dayId": 4,
       "userId": 16,
       "id": 4
     },
     {
-      "breakFast": "",
-      "lunch": "",
-      "dinner": "",
-      "dayId": 5,
-      "userId": 16,
-      "id": 5
+      "breakFast": "Cereals",
+      "lunch": "Pasta",
+      "dinner": "Pizza",
+      "dayId": 1,
+      "userId": 18,
+      "id": 7
     },
     {
-      "breakFast": "",
-      "lunch": "",
-      "dinner": "",
+      "breakFast": "French Toast",
+      "lunch": "Beans with Rice",
+      "dinner": "Pizza",
       "dayId": 1,
       "userId": 16,
-      "id": 6
+      "id": 10
+    },
+    {
+      "breakFast": "Pancake",
+      "lunch": "Pasta",
+      "dinner": "Salad",
+      "dayId": 5,
+      "userId": 16,
+      "id": 28
+    },
+    {
+      "breakFast": "Cereals",
+      "lunch": "Noodles",
+      "dinner": "Taco",
+      "dayId": 2,
+      "userId": 16,
+      "id": 29
     }
   ],
   "days": [
@@ -95,7 +105,32 @@
       "id": 5
     }
   ],
-  "groceries": [],
+  "groceries": [
+    {
+      "groceryName": "Milk",
+      "quantity": "1gallon",
+      "store": "Publix",
+      "typeId": 1,
+      "userId": 16,
+      "id": 1
+    },
+    {
+      "groceryName": "Eggs",
+      "quantity": "1 Tray",
+      "store": "Sprouts",
+      "typeId": 2,
+      "userId": 16,
+      "id": 3
+    },
+    {
+      "groceryName": "Apples",
+      "quantity": "3lb",
+      "store": "Publix",
+      "typeId": 2,
+      "userId": 16,
+      "id": 4
+    }
+  ],
   "types": [
     {
       "type": "Dairy",
