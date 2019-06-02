@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "email": "dolly@225",
-      "password": "dolly",
-      "id": 3
-    },
-    {
       "email": "abc@email",
       "password": "abc",
       "id": 4
@@ -21,32 +16,73 @@
       "id": 6
     },
     {
-      "email": "anu@gmail.com",
-      "password": "anu",
-      "id": 7
+      "email": "foo@foo",
+      "password": "foo",
+      "id": 14
     },
     {
-      "email": "dimple@email",
-      "password": "dimple",
-      "id": 8
-    },
-    {
-      "email": "abc@email",
-      "password": "123",
-      "id": 10
-    },
-    {
-      "email": "sonu@gmail",
-      "password": "sonu",
-      "id": 11
+      "email": "Jisie@email.com",
+      "password": "Jisie",
+      "id": 15
     },
     {
       "email": "dolly@email.com",
       "password": "dolly",
-      "id": 13
+      "id": 16
+    },
+    {
+      "email": "abc@email",
+      "password": "abc",
+      "id": 17
+    },
+    {
+      "email": "sonu@gmail",
+      "password": "Sonu8*",
+      "id": 18
     }
   ],
-  "meals": [],
+  "meals": [
+    {
+      "breakFast": "Waffles",
+      "lunch": "Noodles",
+      "dinner": "Paneer with Naan",
+      "dayId": 4,
+      "userId": 16,
+      "id": 4
+    },
+    {
+      "breakFast": "Cereals",
+      "lunch": "Pasta",
+      "dinner": "Pizza",
+      "dayId": 1,
+      "userId": 18,
+      "id": 7
+    },
+    {
+      "breakFast": "French Toast",
+      "lunch": "Beans with Rice",
+      "dinner": "Pizza",
+      "dayId": 1,
+      "userId": 16,
+      "id": 10
+    },
+    {
+      "breakFast": "Pancake",
+      "lunch": "Pasta",
+      "dinner": "Salad",
+      "dayId": 5,
+      "userId": 16,
+      "id": 28
+    },
+    {
+      "breakFast": "Cereals",
+      "lunch": "Noodles",
+      "dinner": "Taco",
+      "dayId": 2,
+      "userId": 16,
+      "id": 29
+    }
+  ],
   "days": [
     {
       "name": "Monday",
@@ -71,52 +107,28 @@
   ],
   "groceries": [
     {
-      "groceryName": "oranges",
-      "quantity": "4 lb",
-      "store": "Kroger",
-      "typeId": 2,
-      "userId": 4,
-      "id": 2
+      "groceryName": "Milk",
+      "quantity": "1gallon",
+      "store": "Publix",
+      "typeId": 1,
+      "userId": 16,
+      "id": 1
     },
     {
-      "groceryName": "oranges",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": 4,
-      "userId": 4,
+      "groceryName": "Eggs",
+      "quantity": "1 Tray",
+      "store": "Sprouts",
+      "typeId": 2,
+      "userId": 16,
+      "id": 3
+    },
+    {
+      "groceryName": "Apples",
+      "quantity": "3lb",
+      "store": "Publix",
+      "typeId": 2,
+      "userId": 16,
       "id": 4
-    },
-    {
-      "groceryName": "apples",
-      "quantity": "2 lb",
-      "store": "Kroger",
-      "typeId": 2,
-      "userId": 4,
-      "id": 6
-    },
-    {
-      "groceryName": "apples",
-      "quantity": "",
-      "store": "",
-      "typeId": 6,
-      "userId": 4,
-      "id": 7
-    },
-    {
-      "groceryName": "Naan",
-      "quantity": "1pack",
-      "store": "sprouts",
-      "typeId": 7,
-      "userId": 4,
-      "id": 8
-    },
-    {
-      "groceryName": "apples",
-      "quantity": "2 lb",
-      "store": "sprouts",
-      "typeId": 6,
-      "userId": 4,
-      "id": 9
     }
   ],
   "types": [

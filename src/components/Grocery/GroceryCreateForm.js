@@ -85,13 +85,14 @@ export default class GroceryCreateForm extends Component {
                     >Go to Meal Planner</button> */}
                 </div>
 
-                <form className="CreateGroceryForm">
-                    <div><h3><b>Create Grocery List</b></h3></div>
+                <form className="CreateGroceryForm"
+                autoComplete="off">
+                    <div><h4><b>Create Grocery List</b></h4></div>
 
                     <div
                         className="form-group">
-                        <label htmlFor="grocery"><h4>GroceryName</h4></label>
-                        <input maxlength="25"
+                        <label htmlFor="grocery">GroceryName</label>
+                        <input maxLength="25"
                                refs = "groceryName"
                             type="text" required
                             className="form-control"
@@ -101,8 +102,8 @@ export default class GroceryCreateForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="quantity"><h4>Quantity</h4></label>
-                        <input maxlength="25"
+                        <label htmlFor="quantity">Quantity</label>
+                        <input maxLength="25"
                         ref = "quantity"
                             type="text" required
                             className="form-control"
@@ -114,8 +115,8 @@ export default class GroceryCreateForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="store"><h4>Store</h4></label>
-                        <input maxlength="25"
+                        <label htmlFor="store">Store</label>
+                        <input maxLength="25"
                              ref="store"
                             type="text" required
                             className="form-control"
@@ -147,6 +148,7 @@ export default class GroceryCreateForm extends Component {
 
 
                     <button type="Submit"
+                    
                         onClick={this.constructNewgrocery} className="btn btn-primary">
                         save</button>
 

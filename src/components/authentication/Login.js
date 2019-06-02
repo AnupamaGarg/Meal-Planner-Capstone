@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LoginManager from "../dataManager/LoginManager"
 import "./Login.css"
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
     // set initial state
@@ -37,9 +38,14 @@ export default class Login extends Component {
                         userId: this.state.userId
                     })
                     console.log(loginObj)
-
+                    // sessionStorage.setItem("user " ,this.state.userId)
                     sessionStorage.setItem("userInfo", loginObj);
                      console.log("info matched")
+                     this.props.getloggedUserMealsGroceries()
+
+                    // let testId= sessionStorage.getItem("user")
+                    // this.props.getAll(testId)
+                    
                      this.props.history.push("/meal")
                 
                 }
@@ -85,11 +91,12 @@ export default class Login extends Component {
                                 <button
                                     type="submit">
                                     Submit
-                </button>
+                                </button>
 
                             </div>
+                            <div><Link className="Register" to={{ pathname: "/Register"}}>Register</Link></div>
                         </form>
-                    </div>
+                    </div>   
                 </div>
             </div>
 

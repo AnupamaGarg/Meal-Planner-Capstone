@@ -17,8 +17,10 @@ class GroceryList extends Component {
 
         return (
             <React.Fragment>
-                <div className="GListHeading"><h3><b>GroceryList</b></h3><button id="deteleWholeList" onClick={this.deleteThisGroceryList}>Clear All </button></div>
                 <div className="glist">
+
+                <div className="GListHeading"><h3><b>GroceryList</b></h3><a href="#" className="deteleWholeList" onClick={this.deleteThisGroceryList}>Clear All </a></div>
+                
 
                     <section className="grocery">
                         {/* {
@@ -33,16 +35,16 @@ class GroceryList extends Component {
 
                                 <div className="eachListDiv" id={grocery.id} key={grocery.id}>
 
-                                    <input type="checkbox"  />
-                                    <h4>{grocery.groceryName} </h4>
-                                    <h4>{grocery.quantity} </h4>
-                                    <h4>{grocery.store} </h4>
+                                    <input  className = "checkBox" type="checkbox"  />
+                                    <h5>{grocery.groceryName} </h5>
+                                    <h5>{grocery.quantity} </h5>
+                                    <h5>{grocery.store} </h5>
                                     {/* <h4>{grocery.type.type} </h4> */}
-                                    <h4>{grocery.type ? grocery.type.type : ""} </h4>
+                                    <h5>{grocery.type ? grocery.type.type : ""} </h5>
 
 
 
-                                    <a href="#"
+                                    <a href="#" className="g-card-link"
                                         onClick={() => this.props.deleteGrocery(grocery.id)}
                                         >Delete</a>
                                     <br></br>
@@ -50,7 +52,7 @@ class GroceryList extends Component {
 
 
 
-                                    <Link className="nav-link" to={`/grocery/${grocery.id}/edit`}>Edit</Link>
+                                    <Link className="g-card-link-edit" to={`/grocery/${grocery.id}/edit`}>Edit</Link>
 
 
 

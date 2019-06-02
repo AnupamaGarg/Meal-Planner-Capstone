@@ -14,13 +14,13 @@ export default class MealCreateForm extends Component {
 
 
     };
-    
+
 
     clearFields = () => {
-        document.querySelector("#dayId").value="";
+        document.querySelector("#dayId").value = "";
 
-       return this.setState({
-            dayId:"",
+        return this.setState({
+            dayId: "",
             breakFast: "",
             lunch: "",
             dinner: ""
@@ -46,26 +46,31 @@ export default class MealCreateForm extends Component {
 
         stateToChange[evt.target.id] = parseInt(evt.target.value)
         this.setState(stateToChange)
-        
+
     }
-    
+
     constructNewMeal = evt => {
         evt.preventDefault()
-        if (this.state.dayId === ""||this.state.dayId === null) {
+        if (this.state.dayId === "" || this.state.dayId === null) {
             window.alert("Please select the day")
+
         }
-        else if (this.props.meals.find(e => e.dayId == this.state.dayId)) {
-            window.confirm("it will replace the existing meal for this day")
+
+        else if (this.props.meals.find(e => e.dayId == this.state.dayId && e.userId == this.state.userId)) {
+            alert("This will replace the existing meal")
 
 
-            let id = this.state.dayId
+            // let id = this.state.dayId
+            // let userId = this.state.userId
 
 
-            fetch(`http://localhost:5002/meals?dayId=${id}`).then(e => e.json())
+            fetch(`http://localhost:5002/meals?userId=${this.state.userId}&dayId=${this.state.dayId}`).then(e => e.json())
                 // fetch(`http://localhost:5002/days/?_embed=meals`).then(e => e.json())
 
                 .then(mealsOftheDay => { this.props.deleteMeal(mealsOftheDay[0].id) })
-                .then(ChangedMealOftheDay => console.log(ChangedMealOftheDay))
+            // .then(ChangedMealOftheDay => console.log(ChangedMealOftheDay))
+
+
 
 
 
@@ -83,48 +88,49 @@ export default class MealCreateForm extends Component {
 
             console.log("Gives the meal object", meal)
             this.props.addMeal(meal)
-                
+
                 .then(() => this.clearFields())
                 .then(() => this.props.history.push("/meal"))
         }
-        else{
+        else {
             const meal = {
                 breakFast: this.state.breakFast,
                 lunch: this.state.lunch,
                 dinner: this.state.dinner,
                 dayId: this.state.dayId,
                 userId: this.state.userId
-                
-            }
-                    
 
-                
-                console.log("Gives the meal object", meal)
-                this.props.addMeal(meal)
+            }
+
+
+
+            console.log("Gives the meal object", meal)
+            this.props.addMeal(meal)
                 .then(() => this.clearFields())
                 .then(() => this.props.history.push("/meal"))
         }
 
 
 
-        
+
     }
     render() {
         console.log(this.props.days)
         return (
             <React.Fragment>
-                <form className="CreateMealForm">
+                <form className="CreateMealForm"
+                    autoComplete="off">
                     <div className="mCreateDiv">
-                        <div><b>Create Meal</b></div>
+                        <div><h3><b>Create Meal</b></h3></div>
                         <div className="form-group">
-                            <select 
+                            <select
                                 defaultValue=""
                                 className="form-control"
                                 onChange={this.handleDropDownChange}
                                 id="dayId">
 
-                                <option 
-                                value=""
+                                <option
+                                    value=""
                                 >Select Day</option>
                                 {this.props.days.map(e => (
                                     <option key={e.id} value={e.id}>
@@ -141,7 +147,7 @@ export default class MealCreateForm extends Component {
                         <div
                             className="form-group">
                             <label htmlFor="breakFast">BreakFast</label>
-                            <input maxlength="25"
+                            <input maxLength="25"
                                 type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
@@ -152,7 +158,7 @@ export default class MealCreateForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="Lunch">Lunch</label>
-                            <input maxlength="25"
+                            <input maxLength="25"
                                 type="text" required
                                 className="form-control"
 
@@ -164,7 +170,7 @@ export default class MealCreateForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="url">Dinner</label>
-                            <input maxlength="25"
+                            <input maxLength="25"
                                 type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
@@ -181,7 +187,7 @@ export default class MealCreateForm extends Component {
 
 
                         <button type="Submit"
-                            onClick={this.constructNewMeal}  className="btn btn-primary">
+                            onClick={this.constructNewMeal} className="btn btn-primary">
                             save</button>
 
                     </div>

@@ -7,7 +7,8 @@ export default class MealEditForm extends Component {
         breakFast: "",
         lunch: "",
         dinner: "",
-        dayId: ""
+        dayId: "",
+        userId: JSON.parse(sessionStorage.getItem("userInfo")).userId
     }
 
 
@@ -24,7 +25,8 @@ export default class MealEditForm extends Component {
             breakFast: this.state.breakFast,
             lunch: this.state.lunch,
             dinner: this.state.dinner,
-            dayId: this.state.dayId        
+            dayId: this.state.dayId,
+            userId: this.state.userId        
             }
 
     this.props.updateMeal(this.props.match.params.mealId, existingMeal)
@@ -38,7 +40,9 @@ export default class MealEditForm extends Component {
             breakFast: meal.breakFast,
             lunch: meal.lunch,
             dinner: meal.dinner,
-            dayId: meal.dayId  
+            dayId: meal.dayId,
+        
+
         });
       });
     }
@@ -47,13 +51,13 @@ export default class MealEditForm extends Component {
     render() {
         return (
             <React.Fragment>
-                <form className="CreateMealForm">
+                <form className="CreateMealForm"  autoComplete="off">
                 <div className= "mEditCreateDiv">
                 
                     <div
                             className="form-group">
                             <label htmlFor="breakFast">BreakFast</label>
-                            <input maxlength="25" 
+                            <input maxLength="25" 
                                  type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
@@ -63,7 +67,7 @@ export default class MealEditForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="Lunch">Lunch</label>
-                            <input maxlength="25" 
+                            <input maxLength="25" 
                                 type="text" required
                                 className="form-control"
 
@@ -74,7 +78,7 @@ export default class MealEditForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="url">Dinner</label>
-                            <input maxlength="25" 
+                            <input maxLength="25" 
                                 type="text" required
                                 className="form-control"
                                 onChange={this.handleFieldChange}

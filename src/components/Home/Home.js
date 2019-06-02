@@ -13,9 +13,11 @@ export default class Home extends Component {
         <div className="container">
         
         <Container>
-           <Container className="HomeCopy" pad={{vertical: 'none'}} primary={true}>
+           <Container className="HomeCopy" pad={{vertical: 'none'}} 
+          //  primary={true}
+          >
         <Title isSize="1" className="home-headline">
-          Weekly Meal Planner
+          Weekly Meal Planner and Grocery List
           
         </Title>
         <h2>Plan what you want to eat this week :)</h2>

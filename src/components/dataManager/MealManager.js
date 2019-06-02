@@ -8,7 +8,17 @@ export default {
     return fetch(`http://localhost:5002/meals/${id}`).then(e => e.json());
   },
   getAll() {
-    return fetch(`${remoteURL}/meals?_expand=day&_sort=dayId`).then(e => e.json());
+    
+  let parsedUserId = JSON.parse(sessionStorage.getItem("userInfo"))
+  let activeUserId= parsedUserId.userId
+  
+  console.log(activeUserId)
+    let mealGetAll = `${remoteURL}/meals?userId=${activeUserId}&_expand=day&_sort=dayId`
+    // let mealGetAll = `${remoteURL}/meals?userId=${userId}&_expand=day&_sort=dayId`
+    return fetch(mealGetAll).then(e => e.json());
+
+    // return fetch(`${remoteURL}/meals?_expand=day&_sort=dayId`).then(e => e.json());
+    
   },
   post(newMeal) {
     return fetch(`${remoteURL}/meals`, {

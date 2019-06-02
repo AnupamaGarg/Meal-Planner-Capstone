@@ -1,51 +1,57 @@
-/* .meal{
-    line-height: 1.6;
-    text-align: center;
-    background-color:lightcoral
-}
-.divA{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: aqua
-} */
 
-.CreateGroceryForm{
-    display: flex;
- justify-content: center;
- justify-content: space-around;
- background-color: goldenrod
- /* background-color: aquamarine; */
-}
+  
 
-.list{
-    display: flex;
-    flex-wrap:wrap;
-    
-    /* flex-direction: row; */
-    /* justify-content: space-around; */
-    /* flex-flow: row wrap; */
-    
-}
-.eachListDiv{
+  
 
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: space-around;
-    flex-flow: row wrap;
-   
-    /* align-content: space-around */
-  }    
- .GListHeading{
-     text-align: center;
-    font-size: 2rem bold ;
- }
- .mealComponent{
+  .mealComponent{
      display: flex;
      flex-wrap: wrap;
-     justify-content: first baseline
+     flex-direction: row;
+     /* justify-content: first baseline; */
+     justify-content:space-around;
+    
+     background-image: url("./backgroundCherry.png");
+    background-size: 15%;
+    /* background-color:lightblue */
+  }
+     
+     .groceryComponent{
+      display: flex;
+      /* flex-wrap: wrap; */
+      flex-direction: row;
+      justify-content: first baseline;
+      justify-content:space-around;
+      
+      background-image: url("./backgroundCherry.png");
+      background-size: 15%;
+    background-blend-mode: lighten
+      /* background-color: rgb(247, 226, 229) */
+    
+ } 
+
+ .printList{
+    margin-top: 100px;
+    /* width: 550px;
+  height: 550px; */
+  
  }
- .meal{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between
+ .printLink{
+    background-color: #3c78ef;
+    color: #fff;
+    /* margin: 0px 0 0 10px; */
+    padding: 6px 15px 6px 15px;
+
+    height: 40px;
+    border-radius: 4px;
+
+    /* float: center; */
+    font-size: 15px;
+    font-weight: 500;
+    /* padding: px 5px 18px 15px; */
+    cursor: pointer;
+
+    /* box-sizing: border-box; */
+    /* margin: 0; */
+    /* padding: 0; */
  }
+ 
