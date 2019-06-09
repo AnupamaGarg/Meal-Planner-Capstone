@@ -10,7 +10,7 @@ import MealEditForm from './meal/MealEditForm'
 import GroceryEditForm from './grocery/GroceryEditForm'
 import MealManager from './dataManager/MealManager'
 import GroceryManager from './dataManager/GroceryManager'
-import LoginManager from './dataManager/LoginManager'
+
 import Home from './Home/Home'
 import ReactToPrint from "react-to-print"
 import "./meal/meal.css"
